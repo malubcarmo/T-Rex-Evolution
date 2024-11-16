@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+  }
+
+
+  .banner {
+    width: 100%;
+    height: auto; /* Ajuste conforme necessário */
+    background-image: url('Imgs/Banner.jpg');
+    background-size: cover; /* Faz a imagem cobrir o espaço */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* Garantir que as imagens não tenham margem ou padding extras */
+img {
+    width: 100%; 
+    height: auto;
+}
+
+/* Ajustando o container de fundo */
+.bg {
+    width: 100%;
+    height: 100vh; /* Faz com que a imagem de fundo ocupe toda a altura da tela */
+    background-image: url('Imgs/bg.jpg');
+    background-position: center;
+}
+
+/* Garante que não haja espaços entre as divs */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  left: 20px; /* Distância da borda esquerda */
+}
+
+.logo img {
+  width: 220px; /* Largura da logo */
+  height: 58px; /* Altura da logo */
+}
+
+/* Navegação centralizada */
+.nav {
+  position: absolute;
+  top: 20px; /* Distância do topo */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza a navegação */
+  display: flex;
+  gap: 30px; /* Espaçamento de 30px entre os links */
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold; 
+  padding: 5px 10px; /* Espaço extra ao redor do texto (top/bottom e left/right) */
+  transition: background-color 0.5s;
+}
+
+.nav a:hover {
+  background-color: #339878; /* Cor de fundo quando o mouse passa sobre o link */
+  color: white; /* Cor do texto mantém branca */
+  border-radius: 10px; /* Opção para deixar os cantos arredondados */
+  
+}
+
+.socialmedia {
+  position: absolute;
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da borda direita */
+
+}
+
+.socialmedia a {
+  text-decoration: none; 
+  }
+
+.socialmedia img {
+  margin-left: 20px; /* Espaçamento entre os ícones sociais */
+  width: 41px; /* Largura da logo */
+  height: 38px; /* Altura da logo */
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente o ícone (efeito de zoom) */
+}
+
+/* Estilos para o conteúdo centralizado dentro do banner */
+
+.contender {
+  position: absolute;
+  top: 58%; /* Coloca o conteúdo no meio da tela */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza a div .contender tanto vertical quanto horizontalmente */
+  text-align: center; /* Centraliza as imagens dentro da .contender */
+}
+
+/* Estilos para o logo do T-Rex */
+.logoTrex img {
+  width: 580px; /* Ajuste o tamanho da logo do T-Rex */
+  height: 336px;
+  margin-top: 5px; /* Espaçamento da navegação e da logo */
+}
+/* Estilos para o botão de jogo (imagem clicável) */
+.buttomGame a img {
+  width: 352px; /* Ajuste o tamanho da imagem do botão de jogo */
+  height: 140px;
+  margin-top: 1px; /* Espaçamento entre a logo e o botão de jogo */
+  transition: transform 0.3s ease; /* Adiciona transição suave ao botão de jogo */
+}
+
+.buttomGame a img:hover {
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse sobre a imagem */
+}
+
+/* Estilos para texto */
+.titulo {
+  margin-top: 40px; /* Ajuste o valor conforme necessÃ¡rio */
+  margin-left: 30px;     /* Afasta o tÃ­tulo da borda esquerda */
+  color: #ffffff;        /* Define a cor cinza (#808080 Ã© o cinza padrÃ£o) */
+  font-size: 32px;       /* Tamanho da fonte (ajuste conforme necessÃ¡rio) */
+  font-family: 'Poppins', sans-serif;  /* Define a fonte Poppins (ou qualquer outra, caso desejado) */
+  text-decoration: none; 
+}
