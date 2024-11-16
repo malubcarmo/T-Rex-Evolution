@@ -150,6 +150,8 @@ S
   z-index: 10;  /*Deixa o subtítulo acima da imagem */
 }
 
+/* Configuração do Footer */
+
 footer {
   background-color: #161818;
   text-align: center;
@@ -167,7 +169,7 @@ color: white;
 
 .socialmedia2 {
   position: absolute;
-  top: 20px; /* Distância do topo */
+  top: 40px; /* Distância do topo */
   left: 20px; /* Distância da borda direita */
 
 }
@@ -189,10 +191,78 @@ color: white;
   transform: scale(1.1); /* Aumenta levemente o ícone (efeito de zoom) */
 }
 
+.nav2 {
+  margin-top: 10px; /* Distância do topo */
+}
+
 .nav2 a {
   text-decoration: none;
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: bold; 
+}
+
+.nav2 p {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: regular; 
+}
+
+.logosdojogo {
+  position: absolute;
+  top: 30px; /* Distância do topo */
+  right: 30px; /* Distância da borda direita */
+  display: flex; /* Flexbox para alinhar as logos uma ao lado da outra */
+  align-items: center; /* Alinha verticalmente as logos */
+}
+
+.logosdojogo a {
+  text-decoration: none; 
+}
+
+
+/* Estilos para a logo Unity no footer */
+.logosdojogo .unity-logo {
+  width: 66px;
+  height: 60px; /* Tamanho da logo Unity */
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logosdojogo .unity-logo:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+}
+
+/* Estilos para a logo TrexBranco no footer */
+.logosdojogo .trex-logo {
+  width: 174px; /* Largura da logo TrexBranco */
+  height: 34px; /* Altura da logo TrexBranco */
+  margin-left: 10px;
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logosdojogo .trex-logo:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+}
+
+/* Barra separadora entre as logos */
+.logosdojogo .separator {
+  width: 4px; /* Largura da barra */
+  height: 25px; /* Barra ocupa toda a altura do container */
+  background-color: white; /* Cor da barra */
+  margin: 0 15px; /* Espaçamento entre as logos */
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logosdojogo .separator:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a barra (efeito de zoom) */
 }
