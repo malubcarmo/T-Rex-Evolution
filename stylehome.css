@@ -22,11 +22,9 @@ img {
 }
 
 /* Ajustando o container de fundo */
-.bg {
+.bg img {
     width: 100%;
-    height: 100vh; /* Faz com que a imagem de fundo ocupe toda a altura da tela */
-    background-image: url('Imgs/bg.jpg');
-    background-position: center;
+    height: 3168px; /* Faz com que a imagem de fundo ocupe toda a altura da tela */
 }
 
 /* Garante que não haja espaços entre as divs */
@@ -40,7 +38,7 @@ body {
   top: 10px; /* Distância do topo */
   left: 20px; /* Distância da borda esquerda */
 }
-
+S
 .logo img {
   width: 220px; /* Largura da logo */
   height: 58px; /* Altura da logo */
@@ -128,6 +126,7 @@ body {
 /* Estilos para texto */
 .titulo {
   margin-top: 40px; /* Ajuste o valor conforme necessÃ¡rio */
+
   margin-left: 30px;     /* Afasta o tÃ­tulo da borda esquerda */
   color: #ffffff;        /* Define a cor cinza (#808080 Ã© o cinza padrÃ£o) */
   font-size: 32px;       /* Tamanho da fonte (ajuste conforme necessÃ¡rio) */
