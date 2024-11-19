@@ -1,3 +1,4 @@
-<p align="center"><img src="T-Rex-Evolution/Readme/logo_fundo.jpg" alt="Imagem da logo do jogo T-Rex Evolution"></p>
+[Meu Logo](Readme/logo_fundo.png)
+
 
 ## Description
