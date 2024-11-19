@@ -1,269 +1,374 @@
-*{
+/* Resetando margens e padding, além de definir box-sizing para todos os elementos */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Retro Gaming';
+  font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
 }
 
-
-.banner {
-  width: 100%;
-  height: auto; /* Ajuste conforme necessário */
-  background-image: url('Imgs/Banner.jpg');
-  background-size: cover; /* Faz a imagem cobrir o espaço */
-  background-position: center; /* Centraliza a imagem */
-}
-
-/* Garantir que as imagens não tenham margem ou padding extras */
-img {
-  width: 100%; 
-  height: auto;
-}
-
-.bg {
-position: relative; /* Torna a div .bg um contêiner posicionado */
-margin-top: -10px;
-}
-/* Ajustando o container de fundo */
-.bg img {
-  width: 100%;
-  height: 3168px; /* Faz com que a imagem de fundo ocupe toda a altura da tela */
-}
-
-/* Garante que não haja espaços entre as divs */
+/* Garantindo que o corpo da página ocupe toda a tela e sem margens externas */
 body {
   margin: 0;
   padding: 0;
 }
 
-.logo {
-position: absolute;
-top: 10px; /* Distância do topo */
-left: 20px; /* Distância da borda esquerda */
-}
-S
-.logo img {
-width: 220px; /* Largura da logo */
-height: 58px; /* Altura da logo */
+/* Estilos do banner (com imagem de fundo) */
+.banner {
+  width: 100%;
+  height: auto;
+  background-image: url('Imgs/Home/Banner.jpg');
+  background-size: cover; /* A imagem de fundo cobrirá toda a área */
+  background-position: center; /* Centraliza a imagem de fundo */
+  position: relative; /* Necessário para o posicionamento absoluto dos elementos dentro do banner */
 }
 
-/* Navegação centralizada */
+/* Estilos para as imagens dentro do banner */
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Logo do site no canto superior esquerdo */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.logo img {
+  width: 220px;
+  height: 58px;
+}
+
+/* Estilos para a navegação centralizada */
 .nav {
-position: absolute;
-top: 20px; /* Distância do topo */
-left: 50%;
-transform: translateX(-50%); /* Centraliza a navegação */
-display: flex;
-gap: 30px; /* Espaçamento de 30px entre os links */
-align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .nav a {
-text-decoration: none;
-color: white;
-font-family: 'Poppins', sans-serif;
-font-size: 18px;
-font-weight: bold; 
-padding: 5px 10px; /* Espaço extra ao redor do texto (top/bottom e left/right) */
-transition: background-color 0.5s;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.5s;
 }
 
 .nav a:hover {
-background-color: #339878; /* Cor de fundo quando o mouse passa sobre o link */
-color: white; /* Cor do texto mantém branca */
-border-radius: 10px; /* Opção para deixar os cantos arredondados */
-
+  background-color: #339878;
+  color: white;
+  border-radius: 10px;
 }
 
+/* Ícones das redes sociais no canto superior direito */
 .socialmedia {
-position: absolute;
-top: 20px; /* Distância do topo */
-right: 20px; /* Distância da borda direita */
-
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .socialmedia a {
-text-decoration: none; 
+  text-decoration: none;
 }
 
 .socialmedia img {
-margin-left: 20px; /* Espaçamento entre os ícones sociais */
-width: 41px; /* Largura da logo */
-height: 38px; /* Altura da logo */
-opacity: 0.5; /* Opacidade inicial */
-transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-left: 20px;
+  width: 41px;
+  height: 38px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .socialmedia img:hover {
-opacity: 1; /* Opacidade 100% ao passar o mouse */
-transform: scale(1.1); /* Aumenta levemente o ícone (efeito de zoom) */
+  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* Estilos para o conteúdo centralizado dentro do banner */
-
+/* Centraliza o conteúdo principal dentro do banner */
 .contender {
-position: absolute;
-top: 58%; /* Coloca o conteúdo no meio da tela */
-left: 50%;
-transform: translate(-50%, -50%); /* Centraliza a div .contender tanto vertical quanto horizontalmente */
-text-align: center; /* Centraliza as imagens dentro da .contender */
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-/* Estilos para o logo do T-Rex */
+/* Logo do T-Rex dentro do banner */
 .logoTrex img {
-width: 580px; /* Ajuste o tamanho da logo do T-Rex */
-height: 336px;
-margin-top: 5px; /* Espaçamento da navegação e da logo */
+  width: 580px;
+  height: 336px;
+  margin-top: 5px;
 }
-/* Estilos para o botão de jogo (imagem clicável) */
+
+/* Botão de jogo (imagem clicável) */
 .buttomGame a img {
-width: 352px; /* Ajuste o tamanho da imagem do botão de jogo */
-height: 140px;
-margin-top: 1px; /* Espaçamento entre a logo e o botão de jogo */
-transition: transform 0.3s ease; /* Adiciona transição suave ao botão de jogo */
+  width: 352px;
+  height: 140px;
+  margin-top: 1px;
+  transition: transform 0.3s;
 }
 
 .buttomGame a img:hover {
-transform: scale(1.1); /* Efeito de aumento ao passar o mouse sobre a imagem */
+  transform: scale(1.1);
 }
 
-/* Estilos para texto */
+/* Estilos para o conteúdo principal dentro da div.bg */
+.bg {
+  position: relative;
+  padding: 50px 20px; /* Adiciona algum espaço no topo e nas laterais */
+}
+
+/* A imagem de fundo (bg.jpg) que aparece atrás do conteúdo */
+.bg img.background-img {
+  width: 100%;
+  height: 2499px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Fica atrás do conteúdo principal */
+}
+
+/* Estilos para os títulos de texto */
+.titulo,
+.subtitulo {
+  position: absolute;
+  left: 30px;
+  color: white;
+  z-index: 10;
+}
+
 .titulo {
-position: absolute; 
-top: 10px; /* Distância do topo */
-left: 30px;    /* Afasta o tÃ­tulo da borda esquerda */
-color: #ffffff;        /* Define a cor cinza (#808080 Ã© o cinza padrÃ£o) */
-font-size: 30px;       /* Tamanho da fonte (ajuste conforme necessÃ¡rio) */
-font-family: 'Poppins', sans-serif; /* Define a fonte Poppins (ou qualquer outra, caso desejado) */
-text-decoration: none; 
-z-index: 10; /*Deixa o subtítulo acima da imagem */
+  top:90px;
+  font-size: 30px;
 }
 
 .subtitulo {
-position: absolute; 
-margin-top: 50px; /* Distância do topo */
-left: 30px;    /* Afasta o tÃ­tulo da borda esquerda */
-color: #ffffff;    
-font-size: 40px;       /* Tamanho da fonte (ajuste conforme necessÃ¡rio) */
-font-family: 'Retro Gaming';  
-text-decoration: none; 
-z-index: 10;  /*Deixa o subtítulo acima da imagem */
+  top: 140px; /* Distância do topo ajustada */
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
 }
 
-/* Configuração do Footer */
+/* Estilos para o conteúdo com texto e imagem */
+.Conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 170px;
+}
 
+.Texto-conteudo {
+  flex: 1;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 20px; /* Espaço entre o texto e a imagem */
+  z-index: 1;
+}
+
+.imagem-video {
+  flex: 1;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+.imagem-video img {
+  width: 624px;
+  height: 413px;
+  border-radius: 15px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* Faz com que a imagem se ajuste corretamente dentro da caixa */
+  z-index: 1;
+}
+
+
+/* Estilos para a galeria */
+.galeria {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; /* Espaçamento entre a galeria e o conteúdo acima */
+  margin-top: 40px; /* Espaçamento entre a div de conteúdo e a galeria */
+  overflow: hidden; /* Impede a barra de rolagem horizontal */
+   z-index: 1;
+}
+
+.slides {
+  display: flex;
+  height: auto;
+  gap: 32px; /* Espaçamento entre as imagens */
+  overflow: hidden;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slide {
+  height: auto;
+  width: 597px; /* Largura fixa das imagens */
+  height: 369px; /* Altura fixa das imagens */
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajuste da imagem para preencher a caixa */
+  border-radius: 15px;
+}
+
+.slide img:hover {
+  transform: scale(1.05); /* Efeito de zoom nas imagens */
+}
+
+/* Estilos para as bolinhas de navegação */
+.seletor {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px; /* Espaço entre as bolinhas e os slides */
+  z-index: 1;
+}
+
+.bolinha {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo das bolinhas */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bolinha.active {
+  background-color: white; /* Bolinha ativa fica branca */
+  transform: scale(1.2); /* Aumenta a bolinha ativa */
+}
+
+.bolinha:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Efeito de hover nas bolinhas */
+}
+
+/* Estilos para o rodapé */
 footer {
-background-color: #161818;
-text-align: center;
-padding: 20px 0;
-position: relative;
-width: 100%;
-height: 120px;
-margin-top: -10px;
-
+  margin-top: auto; 
+  background-color: #161818;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
 }
 
-footer a {
-color: white;
-}
-
+/* Redes sociais do rodapé */
 .socialmedia2 {
-position: absolute;
-top: 40px; /* Distância do topo */
-left: 20px; /* Distância da borda direita */
-
+  position: absolute;
+  top: 40px;
+  left: 20px;
 }
 
 .socialmedia2 a {
-text-decoration: none; 
+  text-decoration: none;
 }
 
 .socialmedia2 img {
-margin-left: 20px; /* Espaçamento entre os ícones sociais */
-width: 41px; /* Largura da logo */
-height: 38px; /* Altura da logo */
-opacity: 0.5; /* Opacidade inicial */
-transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-left: 20px;
+  width: 41px;
+  height: 38px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .socialmedia2 img:hover {
-opacity: 1; /* Opacidade 100% ao passar o mouse */
-transform: scale(1.1); /* Aumenta levemente o ícone (efeito de zoom) */
+  opacity: 1;
+  transform: scale(1.1);
 }
 
-.nav2 {
-margin-top: 10px; /* Distância do topo */
-}
-
+/* Links no rodapé */
 .nav2 a {
-text-decoration: none;
-color: white;
-font-family: 'Poppins', sans-serif;
-font-size: 15px;
-font-weight: bold; 
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
+/* Texto no rodapé */
 .nav2 p {
 margin-top: 10px;
+margin-top: 10px;
 text-decoration: none;
-color: white;
-font-family: 'Poppins', sans-serif;
-font-size: 12px;
-font-weight: regular; 
+  margin-top: 10px;
+text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
 }
 
+
 .logosdojogo {
-position: absolute;
-top: 30px; /* Distância do topo */
-right: 30px; /* Distância da borda direita */
-display: flex; /* Flexbox para alinhar as logos uma ao lado da outra */
-align-items: center; /* Alinha verticalmente as logos */
+  position: absolute;
+  top: 30px; /* Distância do topo */
+  right: 30px; /* Distância da borda direita */
+  display: flex; /* Flexbox para alinhar as logos uma ao lado da outra */
+  align-items: center; /* Alinha verticalmente as logos */
+
 }
 
 .logosdojogo a {
-text-decoration: none; 
+  text-decoration: none; 
+
 }
 
 
 /* Estilos para a logo Unity no footer */
-.logosdojogo .unity-logo {
-width: 66px;
-height: 60px; /* Tamanho da logo Unity */
-opacity: 0.5; /* Opacidade inicial */
-transition: opacity 0.3s ease, transform 0.3s ease;
+.logosdojogo .unity-logo img {
+  width: 66px;
+  height: 60px; /* Tamanho da logo Unity */
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
 }
 
-.logosdojogo .unity-logo:hover {
-opacity: 1; /* Opacidade 100% ao passar o mouse */
-transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+.logosdojogo .unity-logo img:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+
 }
 
 /* Estilos para a logo TrexBranco no footer */
-.logosdojogo .trex-logo {
-width: 174px; /* Largura da logo TrexBranco */
-height: 34px; /* Altura da logo TrexBranco */
-margin-left: 10px;
-opacity: 0.5; /* Opacidade inicial */
-transition: opacity 0.3s ease, transform 0.3s ease;
+.logosdojogo .trex-logo img {
+  width: 174px; /* Largura da logo TrexBranco */
+  height: 34px; /* Altura da logo TrexBranco */
+  margin-left: 10px;
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.logosdojogo .trex-logo:hover {
-opacity: 1; /* Opacidade 100% ao passar o mouse */
-transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+.logosdojogo .trex-logo img:hover {
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a logo (efeito de zoom) */
+
 }
 
 /* Barra separadora entre as logos */
 .logosdojogo .separator {
-width: 4px; /* Largura da barra */
-height: 25px; /* Barra ocupa toda a altura do container */
-background-color: white; /* Cor da barra */
-margin: 0 15px; /* Espaçamento entre as logos */
-opacity: 0.5; /* Opacidade inicial */
-transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 4px; /* Largura da barra */
+  height: 25px; /* Barra ocupa toda a altura do container */
+  background-color: white; /* Cor da barra */
+  margin: 0 15px; /* Espaçamento entre as logos */
+  opacity: 0.5; /* Opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .logosdojogo .separator:hover {
-opacity: 1; /* Opacidade 100% ao passar o mouse */
-transform: scale(1.1); /* Aumenta levemente a barra (efeito de zoom) */
+  opacity: 1; /* Opacidade 100% ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente a barra (efeito de zoom) */
 }

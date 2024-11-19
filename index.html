@@ -8,49 +8,41 @@
 </head>
 <body>
     
-    <div class="banner">
+    <!-- Banner -->
+    <header class="banner">
         <div class="logo">
-            <img src="Imgs/Home/logo.png" alt="Logo">
+            <img src="Imgs/Home/logo.png" alt="Logo do T-Rex Evolution">
         </div>
 
-        <!-- Navegação centralizada -->
-        <div class="nav">
+        <!-- Navegação principal -->
+        <nav class="nav">
             <a href="#">HOME</a>
             <a href="#">SOBRE</a>
             <a href="#">DOCUMENTAÇÃO</a>
-        </div>
+        </nav>
 
-        <!-- Navegação para as redes sociais no canto superior direito -->
+        <!-- Redes sociais -->
         <div class="socialmedia">
-            <a href="#">
-                <img src="Imgs/SocialMedia/face.png" alt="face" /> 
-            </a>
-            <a href="#">
-                <img src="Imgs/SocialMedia/Insta.png" alt="Insta" /> 
-            </a>
-            <a href="#">
-                <img src="Imgs/SocialMedia/youtube.png" alt="youtube" /> 
-            </a>
+            <a href="#"><img src="Imgs/SocialMedia/face.png" alt="Facebook"></a>
+            <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
+            <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
         </div>
 
-        <!-- conteúdo centralizado dentro do banner -->
+        <!-- Conteúdo principal -->
         <div class="contender">
             <div class="logoTrex">
-                <img src="Imgs/Home/trex.png" alt="Id Trex" />
+                <img src="Imgs/Home/trex.png" alt="T-Rex Evolution">
             </div>
             
             <div class="buttomGame">
-                <a href="#"> <!-- Colocar o link do jogo -->
-                    <img src="Imgs/Home/play.png" alt="Play" />
-                </a>
+                <a href="#"><img src="Imgs/Home/play.png" alt="Jogar"></a>
             </div>
         </div>
-
-        <img src="Imgs/Home/Banner.jpg" alt="Banner">   
-    </div>
+        <img src="Imgs/Home/Banner.jpg" alt="Banner do site">   
+    </header>
     
-     <!-- background do site -->
-    <div class="bg"> 
+    <!-- Conteúdo principal do site -->
+    <div class="bg">
         <div class="Texto">
             <h1 class="titulo">A HISTÓRIA:</h1>
         </div>
@@ -58,27 +50,55 @@
             <h1 class="subtitulo">T- REX EVOLUTION</h1>
         </div>
 
-        <img src="Imgs/bg.jpg" alt="Background">     
+        <!-- Conteúdo com texto e imagem -->
+        <div class="Conteudo">
+            <div class="Texto-conteudo">
+                <p>
+                    Visualize um cenário vulcânico repleto de lava incandescente, onde os jogadores
+                    serão desafiados a explorar e navegar com cautela. Nessa nova história, o T-Rex precisará desviar
+                    dos obstáculos, porque, se não, ele vai descobrir da pior forma que o chão é lava! 
+                    <br> <br>O fluxo do jogo é baseado no percurso cheio de desafios que o dinossauro deverá percorrer correndo e depois voando. Durante esse percurso, o jogador enfrentará
+                    obstáculos como pedras, bolas de fogo, crateras e a lava.
+                </p>
+            </div>
+            <div class="imagem-video">
+                <img src="Imgs/00.jpg" alt="Cenário Vulcânico">
+            </div>
+        </div>
 
+        <div class="galeria">
+            <div class="slides">
+                <div class="slide"><img src="Imgs/Galeria/01.jpg" alt="Imagem 2"></div>
+                <div class="slide"><img src="Imgs/Galeria/02.jpg" alt="Imagem 2"></div>
+                <div class="slide"><img src="Imgs/Galeria/03.jpg" alt="Imagem 3"></div>
+                <div class="slide"><img src="Imgs/Galeria/04.jpg" alt="Imagem 4"></div>
+                <div class="slide"><img src="Imgs/Galeria/05.jpg" alt="Imagem 5"></div>
+            </div>
+            <div class="seletor">
+                <span class="bolinha active" data-slide="0"></span>
+                <span class="bolinha" data-slide="1"></span>
+                <span class="bolinha" data-slide="2"></span>
+                <span class="bolinha" data-slide="3"></span>
+                <span class="bolinha" data-slide="4"></span>
+            </div>
+        </div>
+        
+        <img src="Imgs/bg.jpg" alt="Background" class="background-img"> 
     </div>
 
+    <!-- Rodapé -->
     <footer>
         <div class="socialmedia2">
-            <a href="#">
-                <img src="Imgs/SocialMedia/face.png" alt="face" /> 
-            </a>
-            <a href="#">
-                <img src="Imgs/SocialMedia/Insta.png" alt="Insta" /> 
-            </a>
-            <a href="#">
-                <a href="#">
-                    <img src="Imgs/SocialMedia/youtube.png" alt="youtube" /> 
-                </a>
+            <a href="#"><img src="Imgs/SocialMedia/face.png" alt="Facebook"></a>
+            <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
+            <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
         </div>
+
         <div class="nav2">
             <a href="#">CONHEÇA O TIME</a>
-            <p>  © Copyright 2024 TREX Evolution. Todos os direitos reservados. <br>Este site utiliza cookies blá blá...</p>
+            <p>  © Copyright 2024 TREX Evolution. Todos os direitos reservados. <br>Este site utiliza cookies...</p>
         </div>
+
         <div class="logosdojogo">
             <a href="#" class="unity-logo">
                 <img src="Imgs/Footer/Unity.png" alt="Unity" /> 
@@ -89,8 +109,7 @@
                 <img src="Imgs/Footer/trex branco.png" alt="TrexBranco" /> 
             </a>
         </div>
+    </footer>
 
-      </footer>
-   
 </body>
 </html>
