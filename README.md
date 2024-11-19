@@ -1,4 +1,4 @@
-[Meu Logo](Readme/logo_fundo.png)
+[Meu Logo](Readme/logo_fundo.jpg)
 
 
 ## Description
