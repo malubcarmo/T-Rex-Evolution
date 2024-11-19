@@ -1,4 +1,3 @@
-[Meu Logo](Readme/logo_fundo.jpg)
-
+![T-Rex Evolution](Readme/logo_fundo.jpg)
 
 ## Description
