@@ -17,7 +17,7 @@
         <!-- Navegação principal -->
         <nav class="nav">
             <a href="#">HOME</a>
-            <a href="#">SOBRE</a>
+            <a href="#sobre">SOBRE</a>
             <a href="#">DOCUMENTAÇÃO</a>
         </nav>
 
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Conteúdo principal -->
-        <div class="contender">
+        <div class="container">
             <div class="logoTrex">
                 <img src="Imgs/Home/Header/trex.png" alt="T-Rex Evolution">
             </div>
@@ -46,7 +46,7 @@
         <div class="Texto">
             <h1 class="titulo">A HISTÓRIA:</h1>
         </div>
-        <div class="Texto">
+        <div class="Texto" id="sobre"> <!-- ID atribuído à div -->
             <h1 class="subtitulo">T- REX EVOLUTION</h1>
         </div>
 
@@ -66,23 +66,60 @@
             </div>
         </div>
 
+        <!-- Galeria -->
         <div class="galeria">
-            <div class="slides">
-                <div class="slide"><img src="Imgs/Galeria/01.jpg" alt="Imagem 2"></div>
-                <div class="slide"><img src="Imgs/Galeria/02.jpg" alt="Imagem 2"></div>
-                <div class="slide"><img src="Imgs/Galeria/03.jpg" alt="Imagem 3"></div>
-                <div class="slide"><img src="Imgs/Galeria/04.jpg" alt="Imagem 4"></div>
-                <div class="slide"><img src="Imgs/Galeria/05.jpg" alt="Imagem 5"></div>
-            </div>
-            <div class="seletor">
-                <span class="bolinha active" data-slide="0"></span>
-                <span class="bolinha" data-slide="1"></span>
-                <span class="bolinha" data-slide="2"></span>
-                <span class="bolinha" data-slide="3"></span>
-                <span class="bolinha" data-slide="4"></span>
+            <div class="imgGaleria">
+                <div class="slide_div" id="slide_1">
+                    <img src="Imgs/Home/Galeria/01.jpg" alt="Imagem 1" class="img" id="img1">
+                </div>
+                <div class="slide_div" id="slide_2">
+                    <img src="Imgs/Home/Galeria/02.jpg" alt="Imagem 2" class="img" id="img2">
+                </div>
+                <div class="slide_div" id="slide_3">
+                    <img src="Imgs/Home/Galeria/03.jpg" alt="Imagem 3" class="img" id="img3">
+                </div>
+                <div class="slide_div" id="slide_4">
+                    <img src="Imgs/Home/Galeria/04.jpg" alt="Imagem 4" class="img" id="img4">
+                </div>
+                <div class="slide_div" id="slide_5">
+                    <img src="Imgs/Home/Galeria/05.jpg" alt="Imagem 5" class="img" id="img5">
+                </div>
+                <div class="slide_div" id="slide_6">
+                    <img src="Imgs/Home/Galeria/06.jpg" alt="Imagem 6" class="img" id="img6">
+                </div>
             </div>
         </div>
-        
+
+        <!-- Texto sobre os personagens -->
+        <div class="Texto2">
+            <h1 class="titulo2">CONHEÇA OS:</h1>
+        </div>
+        <div class="Texto2">
+            <h1 class="subtitulo2">PERSONAGENS</h1>
+        </div>
+
+        <!-- Imagens e texto sobre os personagens -->
+        <div class="personagens">
+            <div class="personagem">
+                <img src="Imgs/Home/Personagens/01.jpg" alt="Imagem 04">
+                <div class="descricao">
+                    <p><b>Personagem, Ovo:</b> <br>Um pequeno herói em evolução.</p>
+                </div>
+            </div>
+            <div class="personagem">
+                <img src="Imgs/Home/Personagens/02.jpg" alt="Imagem 05">
+                <div class="descricao">
+                    <p><b>Personagem, T-Rex:</b> <br> O dinossauro aventureiro.</p>
+                </div>
+            </div>
+            <div class="personagem">
+                <img src="Imgs/Home/Personagens/03.jpg" alt="Imagem 06">
+                <div class="descricao">
+                    <p><b>Personagem, Pterossauro:</b> <br>O guardião dos céus.</p>
+                </div>
+            </div>
+        </div>
+
         <img src="Imgs/bg.jpg" alt="Background" class="background-img"> 
     </div>
 
@@ -96,20 +133,14 @@
 
         <div class="nav2">
             <a href="#">CONHEÇA O TIME</a>
-            <p>  © Copyright 2024 TREX Evolution. Todos os direitos reservados. <br>Este site utiliza cookies...</p>
+            <p>© Copyright 2024 TREX Evolution. Todos os direitos reservados. <br>Este site utiliza cookies...</p>
         </div>
 
         <div class="logosdojogo">
-            <a href="#" class="unity-logo">
-                <img src="Imgs/Footer/Unity.png" alt="Unity" /> 
-            </a>
-            <div class="separator">
-            </div> <!-- Barra branca separadora -->
-            <a href="#" class="trex-logo">
-                <img src="Imgs/Footer/trex branco.png" alt="TrexBranco" /> 
-            </a>
+            <a href="#" class="unity-logo"><img src="Imgs/Footer/Unity.png" alt="Unity"></a>
+            <div class="separator"></div>
+            <a href="#" class="trex-logo"><img src="Imgs/Footer/trex branco.png" alt="Logo T-Rex"></a>
         </div>
     </footer>
-
 </body>
 </html>
