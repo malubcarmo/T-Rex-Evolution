@@ -90,7 +90,7 @@ body {
   z-index: 1; /* Para garantir que o título fique em cima da imagem */
   text-align: center; /* Centralizando o título */
   color: white; /* Cor do texto */
-  top: 95px; /* Posionamento do titulo DESENVOLVIMENTO - Ajuste o valor conforme necessário */
+  top: 70px; /* Posionamento do titulo DESENVOLVIMENTO - Ajuste o valor conforme necessário */
   font-size: 24px; /* Tamanho do título */
   margin-top: 0;
   margin-bottom: 20px;
@@ -100,15 +100,18 @@ body {
 
 .titulo-conteudo {
   position: absolute; /* Posiciona o título sobre a imagem */
-  top: 30%; /* Posiciona o título no meio da tela (ajuste conforme necessário) */
   left: 30px; /* Alinha o título à esquerda */
-  transform: translateY(-50%); /* Ajusta a posição para centralizar verticalmente */
   color: white; /* Cor do texto */
-  font-size: 36px; /* Tamanho do título */
-  top: 300px; /* Posionamento do titulo DESENVOLVIMENTO - Ajuste o valor conforme necessário */
+  font-size: 20px; /* Tamanho do título */
+  top: 200px; /* Posionamento do titulo DESENVOLVIMENTO - Ajuste o valor conforme necessário */
   z-index: 1; /* Fica atrás do conteúdo principal */
   position: relative; /* Necessário para o z-index funcionar */
-
+  text-align: justify; /* Justifica o texto */
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 50px; /* Espaço entre o texto e a imagem */
+  margin-left: 50px ;
 }
 .titulo2 {
   font-size: 15px; /* Tamanho do título */
@@ -117,23 +120,16 @@ body {
   
 }
 
-.Texto {
-  margin-top: 100px;
-  left: 30px;
-  z-index: 1; /* Fica atrás do conteúdo principal */
-  position: relative; /* Necessário para o z-index funcionar */
-}
 
 .conteudo{
-
-  top: 30%;
   color: white; /* Cor do texto */
   font-size: 20px;
-  font-weight: normal;
-  line-height: 1.6;
   text-align: justify; /* Justifica o texto */
-  z-index: 1; /* Fica atrás do conteúdo principal */
-  position: relative; /* Necessário para o z-index funcionar */
+  margin-right: 50px; /* Espaço entre o texto e a imagem */
+ 
+  
+
+  
 }
 /* Galeria de imgs */
 
@@ -204,5 +200,57 @@ body {
   border-radius: 10px;
 
 }
+/*estilizando a parTE "DOCUMENTAÇÃO DO PROJETO"*/
+.Titulo3{
+
+}
+
+.Texto {
+  display: flex;             /* Usando Flexbox */
+  justify-content: space-between; /* Espaçamento entre os elementos */
+  align-items: center;       /* Alinha os itens verticalmente no centro */
+  gap: 50px;                 /* Espaçamento entre os itens */
+  scroll-behavior: smooth;  
+  
+}
+
+.conteudo2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex: 1;  /* Faz com que a div de conteúdo ocupe o máximo de espaço disponível */
+  padding: 10px;
+  
+}
+.conteudodois {
+  margin-left: 50px; 
+  flex: 1; /* Faz com que a div de conteúdo ocupe o máximo de espaço disponível */
+  color:#ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 20x; /* Espaço entre o texto e a imagem */
+ 
+}
+/* Estilo para a img do "video" */
+
+.imagem-video {
+  margin-left: 30px;
+  margin-right: 20px;
+  flex: 0 0 auto;            /* Não permite que a div de imagem cresça ou encolha */
+  width: 300px;  
+}
+
+.imagem-video img {
+  
+  border-radius: 15px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* Faz com que a imagem se ajuste corretamente dentro da caixa */
+  width: 100%;               /* Faz com que a imagem ocupe toda a largura da div */
+  height: auto;              /* Mantém a proporção da imagem */
+}
+
+
 
 
