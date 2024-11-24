@@ -200,57 +200,70 @@ body {
   border-radius: 10px;
 
 }
-/*estilizando a parTE "DOCUMENTAÇÃO DO PROJETO"*/
-.Titulo3{
 
+/*estilizando a parTE "DOCUMENTAÇÃO DO PROJETO"*/
+
+
+.Texto3 .titulo3 {
+  margin-left: 30px;
+  font-size: 25px;
+  margin-bottom: 5px; /* Controle melhor do espaçamento entre título e subtítulo */
+  color: white;
+  
 }
 
-.Texto {
-  display: flex;             /* Usando Flexbox */
-  justify-content: space-between; /* Espaçamento entre os elementos */
-  align-items: center;       /* Alinha os itens verticalmente no centro */
-  gap: 50px;                 /* Espaçamento entre os itens */
-  scroll-behavior: smooth;  
-  
+.Texto3 .subtitulo3 {
+  margin-left: 30px;
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  margin-top: 0; /* Caso precise ajustar o espaço do subtítulo em relação ao título */
+  color: white;
 }
 
 .conteudo2{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 50px;
-  flex: 1;  /* Faz com que a div de conteúdo ocupe o máximo de espaço disponível */
-  padding: 10px;
-  
+  justify-content: space-between;  
+  align-items:center;      /* Centraliza o conteúdo na parte debaixo da div */
+
+  text-align: justify;      /* Alinha o texto do parágrafo de forma justificada */
+
 }
+  
 .conteudodois {
-  margin-left: 50px; 
-  flex: 1; /* Faz com que a div de conteúdo ocupe o máximo de espaço disponível */
-  color:#ffffff;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.6;
-  text-align: justify; /* Justifica o texto */
-  margin-right: 20x; /* Espaço entre o texto e a imagem */
+  font-size: 16px;
+  color: white;
+  width: 40%;               /* Limita a largura do parágrafo para 40% da tela */
+  line-height: 1.6;         /* Define o espaçamento entre as linhas do texto */
+  margin-left: 60px;
  
 }
-/* Estilo para a img do "video" */
-
-.imagem-video {
-  margin-left: 30px;
-  margin-right: 20px;
-  flex: 0 0 auto;            /* Não permite que a div de imagem cresça ou encolha */
-  width: 300px;  
-}
-
-.imagem-video img {
+/* Estilo da imagem */
+.conteudo2 img {
+  width: 600px;             /* Define a largura da imagem */
+  height: auto;             /* Mantém a proporção original da imagem */
+  border-radius: 8px;       /* Deixa as bordas da imagem arredondadas (opcional) */
+  margin-right:60px;
   
-  border-radius: 15px; /* Bordas arredondadas na imagem */
-  object-fit: cover; /* Faz com que a imagem se ajuste corretamente dentro da caixa */
-  width: 100%;               /* Faz com que a imagem ocupe toda a largura da div */
-  height: auto;              /* Mantém a proporção da imagem */
+}
+/*Estilizado a parte CONHEÇA O TIME*/
+.Texto4{
+  margin-top: 100px;
+  position: relative; /* Necessário para o z-index funcionar */
+  text-align: center;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+  color: #ffffff;
+}
+.Texto4 .titulo4 {
+  margin-left: 30px;
+  font-size: 20px;
+  margin-bottom: 5px; /* Controle melhor do espaçamento entre título e subtítulo */
+  
 }
 
-
-
-
+.Texto4 .subtitulo4 {
+  margin-left: 30px;
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  margin-top: 0; /* Caso precise ajustar o espaço do subtítulo em relação ao título */
+}
