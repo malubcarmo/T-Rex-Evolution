@@ -355,12 +355,11 @@ width:  100%;
 }
 
 /* Estilos para o rodapé */
-
 footer {
   margin-top: 100px;
   background-color: #161818;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 40px; /* Aumentado para afastar elementos das bordas */
   width: 100%;
   height: 120px;
   z-index: 1;
@@ -368,11 +367,10 @@ footer {
 }
 
 /* Redes sociais do rodapé */
-
 .socialmedia2 {
   position: absolute;
   top: 40px;
-  left: 20px;
+  left: 40px; /* Aumentada a distância da borda esquerda */
 }
 
 .socialmedia2 a {
@@ -380,7 +378,7 @@ footer {
 }
 
 .socialmedia2 img {
-  margin-left: 20px;
+  margin-left: 15px; /* Ajustado o espaçamento entre ícones */
   width: 41px;
   height: 38px;
   opacity: 0.5;
@@ -392,7 +390,15 @@ footer {
   transform: scale(1.1);
 }
 
-/* Rede sociais no rodapé */
+/* Ajustes no container nav2 */
+.nav2 {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos em uma coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 10px 20px; /* Adiciona espaçamento interno */
+  gap: 5px; /* Espaçamento entre <a> e <p> */
+}
 
 .nav2 a {
   text-decoration: none;
@@ -400,10 +406,11 @@ footer {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: bold;
+  margin-bottom: 1px; /* Espaço abaixo do link */
+  padding: 5px 10px; /* Espaçamento interno do link */
 }
 
 /* Texto no rodapé */
-
 .nav2 p {
   margin-top: 10px;
   color: white;
@@ -412,7 +419,6 @@ footer {
 }
 
 /* Logos do jogo no rodapé */
-
 .logosdojogo {
   position: absolute; /* Fixar a posição na tela */
   bottom: 20px; /* Distância da parte inferior */
@@ -453,7 +459,6 @@ footer {
 }
 
 /* Separador entre os logos */
-
 .logosdojogo .separator {
   width: 4px;
   height: 30px; /* Altura do separador */
