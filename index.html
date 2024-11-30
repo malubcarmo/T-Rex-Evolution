@@ -8,8 +8,8 @@
 </head>
 <body>
     
-     <!-- Banner -->
-     <header class="cabecalho">
+    <!-- Banner -->
+    <header class="cabecalho">
         <div class="logo">
             <img src="Imgs/Home/Header/logo.png" alt="Logo do T-Rex Evolution">
         </div>
@@ -27,121 +27,167 @@
             <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
             <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
         </div>
+
+        <!-- Botão do Menu Hamburguer (usando a imagem fornecida) -->
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="Imgs/Home/Header/menu.png" alt="Menu Hamburguer" />
+        </div>
+
+        <!-- Menu do Hambúrguer -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="close-btn" id="close-btn">
+                <span>X</span>
+            </div>
+            <nav class="nav-mobile">
+                <a href="#">HOME</a>
+                <a href="#sobre">SOBRE</a>
+                <a href="#">DOCUMENTAÇÃO</a>
+            </nav>
+            <div class="socialmedia-mobile">
+                <a href="#"><img src="Imgs/SocialMedia/face.png" alt="Facebook"></a>
+                <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
+                <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="container">
+            <div class="logoTrex">
+                <img src="Imgs/Home/Header/trex.png" alt="T-Rex Evolution">
+            </div>
+            
+            <div class="buttomGame">
+                <a href="#"><img src="Imgs/Home/Header/play.png" alt="Jogar"></a>
+            </div>
+        </div> 
     </header>
 
-    <!-- Conteúdo principal -->
-    <div class="container">
-        <div class="logoTrex">
-            <img src="Imgs/Home/Header/trex.png" alt="T-Rex Evolution">
-        </div>
-        
-        <div class="buttomGame">
-            <a href="#"><img src="Imgs/Home/Header/play.png" alt="Jogar"></a>
-        </div>
-    </div>  
+         <!-- Banner de fundo -->
+        <img class="banner" src="Imgs/Home/Header/Banner.jpg" alt="Banner T-Rex">
+    
+    <script>
+        // JavaScript para alternar o menu hambúrguer
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-btn');
 
-    <div class="banner"> 
-        <img src="Imgs/Home/Header/Banner.jpg">
+        // Mostrar menu hambúrguer
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        // Fechar o menu hambúrguer
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+
+    <div class="Container1">
+        <div class="Texto">
+        <h1 class="titulo" id="sobre">A HISTÓRIA:</h1>
+        <h2 class="subtitulo">T- REX EVOLUTION</h2>
     </div>
-    
-<!-- Background da pagina -Fundinho -->
-    <div class="background"> 
-        <img src="Imgs/bg.jpg">
-    </div>
-    
-<!-- Conteúdo principal do site -->
-<div class="Texto">
-    <h1 class="titulo" id="sobre">A HISTÓRIA:</h1>
-    <h2 class="subtitulo">T- REX EVOLUTION</h2>
-</div>
  
-<div class="Conteudo">
-    <div class="Texto-conteudo">
-        <p>
+        <div class="Conteudo">
+         <div class="Texto-conteudo">
+          <p>
             Visualize um cenário vulcânico repleto de lava incandescente, onde os jogadores
             serão desafiados a explorar e navegar com cautela. Nessa nova história, o T-Rex precisará desviar
             dos obstáculos, porque, se não, ele vai descobrir da pior forma que o chão é lava! 
             <br> <br>O fluxo do jogo é baseado no percurso cheio de desafios que o dinossauro deverá percorrer correndo e depois voando. Durante esse percurso, o jogador enfrentará
             obstáculos como pedras, bolas de fogo, crateras e a lava.
-        </p>
-    </div>
-    <div class="imagem-video">
-        <img src="Imgs/00.jpg" alt="Cenário Vulcânico">
-    </div>
-</div>
-    
-    <div class="galeria">
-
-        <div class="imgGaleria">
-            <div class="slide_div" id="slide_1">
-                <img src="Imgs/Home/Galeria/01.jpg" alt="Imagem 1" class="img" id="img1">
-            </div>
-            <div class="slide_div" id="slide_2">
-                <img src="Imgs/Home/Galeria/02.jpg" alt="Imagem 2" class="img" id="img2">
-            </div>
-            <div class="slide_div" id="slide_3">
-                <img src="Imgs/Home/Galeria/03.jpg" alt="Imagem 3" class="img" id="img3">
-            </div>
-            <div class="slide_div" id="slide_4">
-                <img src="Imgs/Home/Galeria/04.jpg" alt="Imagem 4" class="img" id="img4">
-            </div>
-            <div class="slide_div" id="slide_5">
-                <img src="Imgs/Home/Galeria/05.jpg" alt="Imagem 5" class="img" id="img5">
-            </div>
-            <div class="slide_div" id="slide_6">
-                <img src="Imgs/Home/Galeria/06.jpg" alt="Imagem 6" class="img" id="img6">
-            </div>
-
+          </p>
         </div>
 
+        <img class="imagem-video" src="Imgs/00.jpg" alt="Cenário Vulcânico">
+       </div>
+
     </div>
 
-     <!-- Texto sobre os personagens -->
-     <div class="Texto2">
+    <div class="galeria">
+
+       <div class="imgGaleria">
+        <div class="slide_div" id="slide_1">
+            <img src="Imgs/Home/Galeria/01.jpg" alt="Imagem 1" class="img" id="img1">
+       </div>
+        <div class="slide_div" id="slide_2">
+            <img src="Imgs/Home/Galeria/02.jpg" alt="Imagem 2" class="img" id="img2">
+        </div>
+        <div class="slide_div" id="slide_3">
+            <img src="Imgs/Home/Galeria/03.jpg" alt="Imagem 3" class="img" id="img3">
+        </div>
+        <div class="slide_div" id="slide_4">
+            <img src="Imgs/Home/Galeria/04.jpg" alt="Imagem 4" class="img" id="img4">
+        </div>
+        <div class="slide_div" id="slide_5">
+            <img src="Imgs/Home/Galeria/05.jpg" alt="Imagem 5" class="img" id="img5">
+        </div>
+        <div class="slide_div" id="slide_6">
+            <img src="Imgs/Home/Galeria/06.jpg" alt="Imagem 6" class="img" id="img6">
+        </div>
+
+       </div>
+
+   </div>
+
+        <!-- Texto sobre os personagens -->
+    <div class="Texto2">
         <h3 class="titulo">CONHEÇA OS:</h3>
         <h4 class="subtitulo">PERSONAGENS</h4>
     </div>
 
-    <!-- Imagens e texto sobre os personagens -->
+        <!-- Imagens e texto sobre os personagens -->
     <div class="personagens">
         <div class="personagem">
-            <img src="Imgs/Home/Personagens/01.jpg" alt="Imagem 04">
-            <div class="descricao">
-                <p><b>Personagem, Ovo:</b> <br>Um pequeno herói em evolução.</p>
-            </div>
+        <div class="imagem-container">
+        <img src="Imgs/Home/Personagens/01.jpg" alt="Imagem 04">
+        <div class="descricao">
+        <p><b>Personagem, Ovo:</b> <br>Um pequeno herói em evolução.</p>
         </div>
-        <div class="personagem">
-            <img src="Imgs/Home/Personagens/02.jpg" alt="Imagem 05">
-            <div class="descricao">
-                <p><b>Personagem, T-Rex:</b> <br> O dinossauro aventureiro.</p>
-            </div>
-        </div>
-        <div class="personagem">
-            <img src="Imgs/Home/Personagens/03.jpg" alt="Imagem 06">
-            <div class="descricao">
-                <p><b>Personagem, Pterossauro:</b> <br>O guardião dos céus.</p>
-            </div>
         </div>
     </div>
+    <div class="personagem">
+      <div class="imagem-container">
+        <img src="Imgs/Home/Personagens/02.jpg" alt="Imagem 05">
+        <div class="descricao">
+        <p><b>Personagem, T-Rex:</b> <br> O dinossauro aventureiro.</p>
+       </div>
+     </div>
+    </div>
+    <div class="personagem">
+       <div class="imagem-container">
+          <img src="Imgs/Home/Personagens/03.jpg" alt="Imagem 06">
+          <div class="descricao">
+          <p><b>O inimigo, Pterossauro:</b> <br>O caçador implacável dos céus.</p>
+          </div>
+         </div>
+     </div>
+   </div>
 
     <!-- Rodapé -->
     <footer>
-        <div class="socialmedia2">
-            <a href="#"><img src="Imgs/SocialMedia/face.png" alt="Facebook"></a>
-            <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
-            <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
-        </div>
+     <div class="socialmedia2">
+        <a href="#"><img src="Imgs/SocialMedia/face.png" alt="Facebook"></a>
+        <a href="#"><img src="Imgs/SocialMedia/Insta.png" alt="Instagram"></a>
+        <a href="#"><img src="Imgs/SocialMedia/youtube.png" alt="YouTube"></a>
+     </div>
 
-        <div class="nav2">
-            <a href="#">CONHEÇA O TIME</a>
-            <p>&copy; 2024 T-Rex Evolution. Todos os direitos reservados.</p>
-        </div>
+    <div class="nav2">
+        <a href="#">CONHEÇA O TIME</a>
+        <p>© Copyright 2024 TREX Evolution. Todos os direitos reservados. <br>Este site utiliza cookies...</p>
+    </div>
 
-        <div class="logosdojogo">
-            <a href="https://unity.com/" class="unity-logo"><img src="Imgs/Footer/Unity.png" alt="Unity"></a>
-            <div class="separator"></div>
-            <a href="#" class="trex-logo"><img src="Imgs/Footer/trex branco.png" alt="Logo T-Rex"></a>
-        </div>
+    <div class="logosdojogo">
+        <a href="#" class="unity-logo"><img src="Imgs/Footer/Unity.png" alt="Unity"></a>
+        <div class="separator"></div>
+        <a href="#" class="trex-logo"><img src="Imgs/Footer/trex branco.png" alt="Logo T-Rex"></a>
+    </div>
     </footer>
-</body>
+    
+    <!-- Fundo da página-->
+    <div class="background"> 
+      <img src="Imgs/bg.jpg">
+    </div>
+
+ </body>
 </html>
