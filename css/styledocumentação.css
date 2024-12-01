@@ -1,0 +1,568 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
+    
+  }
+
+/* Estilo do cabeçalho */
+.cabecalho {
+  background-color: #161818;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do cabeçalho */
+  align-items: center; /* Alinha verticalmente */
+  padding: 0; /* Remover qualquer preenchimento para garantir que a logo esteja centralizada */
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  top: 15px;
+  left: 20px;
+}
+
+.logo img {
+  width: 190px;
+  height: 28x;
+}
+
+  
+/* Imagem de fundo */
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%; 
+  width: 100%;
+  overflow-x: hidden; /* Impedir rolagem horizontal */
+  
+  
+
+}
+.background {
+  position: fixed; /* Fixa a imagem na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Preenche toda a tela */
+  z-index: -2; /* Coloca a imagem atrás de todos os outros elementos */
+  background-image: url('Imgs/bg.jpg');
+  background-position: center center;
+  background-size: cover;
+ background-repeat: no-repeat; /* Impede repetição */
+  background-attachment: fixed;
+}
+
+.background img {
+  width: 100%;
+  background-position: top left; /* Inicia a imagem do topo à esquerda */
+}
+
+
+/* Centraliza "DOCUMENTAÇÃO" com margem superior de 20px em relação ao cabeçalho */
+.Titulo {
+  text-align: center;
+  margin-top: 80px; /* Espaço de 20px entre o cabeçalho e o título */
+}
+
+.Titulo h1 {
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  color: white;
+}
+
+/* Título "RESULTADOS" alinhado à esquerda */
+.Conteudo {
+  padding: 30px 30px;
+}
+
+.Conteudo h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+/* Estilo do parágrafo de conteúdo */
+.Texto {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Centralização do conteúdo de texto */
+.Texto p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.Titulos {
+color: #ffffff;
+padding: 30px 30px;
+margin-top: 50px;
+}
+
+.Texto .titulo2 {
+  font-size: 30px;
+}
+
+.Titulos .subtitulo2 {
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+}
+
+
+/* Conteudo + Img */
+
+.Conteudo2 {
+  padding: 30px 30px;
+  display: flex;              /* Alinha os itens na horizontal */
+  justify-content: space-between; /* Espaço entre o texto e a imagem */
+  align-items: center;        /* Alinha verticalmente no centro */
+  gap: 20px;                  /* Espaçamento entre os elementos */
+}
+
+/* Estilos do texto */
+
+.Texto-conteudo {
+  color: #ffffff;
+  flex: 1;                    /* O texto ocupa o espaço disponível */
+  max-width: 50%;             /* Limita a largura do texto a no máximo 50% */
+  z-index: 1;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 20px; /* Espaço entre o texto e a imagem */
+}
+/* Estilos da imagem */
+
+.imagem-video {
+  max-width: 50%;             /* Limita a largura da imagem a 50% */
+  height: auto;               /* Ajusta a altura proporcionalmente */
+  z-index: 1;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .Conteudo2 {
+    flex-direction: column;   /* Muda a direção para coluna em telas pequenas */
+    align-items: center;      /* Alinha os itens ao centro */
+  }
+
+  .Texto-conteudo, .imagem-video {
+    max-width: 100%;          /* Ambos os itens ocupam 100% da largura em telas pequenas */
+  }
+
+  .Texto-conteudo {
+    margin-bottom: 20px;      /* Adiciona margem abaixo do texto para separar da imagem */
+  }
+}
+
+/* Galeria de imgs */
+
+.galeria {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1; /* Fica atrás do conteúdo principal */
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+.imgGaleria {
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  height: 420px;
+  padding-bottom: 2px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;  /* Garante que a rolagem "grude" nas imagens */
+  scroll-behavior: smooth;  /* Rolagem suave */
+}
+
+.slide_div{
+  flex-shrink: 0; /* Impede as imagens de encolher */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 20px;
+}
+
+.imgGaleria .img {
+  user-select: none; /* Impede a seleção de texto e evita o fundo azul */
+  position: relative;              /* Define a posição do elemento como relativa, permitindo o uso de posicionamento absoluto em elementos filhos, se necessário */
+  height: 371px;                  /* Define a altura da imagem como 370px */
+  width:  599px;                  /* Define a largura da imagem como 240px */
+  transition: 0.7s;                 /* Adiciona uma transição suave de 0.7 segundos para quaisquer mudanças de propriedades */
+  background-color: rgba(0, 0, 0, 0.4);  /* Define uma cor de fundo com opacidade de 40%, criando um sombreado levemente escuro */
+  border-radius: 20px;             /* Aplica um raio de borda de 20px, arredondando os cantos da imagem */
+}
+
+.imgGaleria .img:hover {
+  transform: scale(1.05);           /* Opcional: aumenta ligeiramente a imagem quando o mouse passa sobre ela */
+}
+
+/* Personalizando a barra de rolagem */
+
+.imgGaleria::-webkit-scrollbar {
+  height: 8px;  /* Define a altura da barra de rolagem horizontal */
+
+}
+
+.imgGaleria::-webkit-scrollbar-thumb {
+  background-color:  #238774;  /* Cor do "thumb" da barra de rolagem */ 
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.imgGaleria::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;   /* Cor do "thumb" ao passar o mouse */
+}
+
+.imgGaleria::-webkit-scrollbar-track {
+  background-color: rgba(139, 139, 139, 0.233);
+  border-radius: 10px;
+
+}
+
+
+
+.Titulos2 {
+  color: #ffffff;
+  margin-top: 50px;
+  display: flex; /* Para usar flexbox */
+  flex-direction: column; /* Organiza os itens na vertical */
+  align-items: center; /* Centraliza os itens na horizontal */
+  justify-content: center; /* Centraliza os itens na vertical */
+  text-align: center; /* Centraliza o texto dentro dos títulos */
+}
+
+.Titulos2 .titulo3 {
+  margin-right: 10px;
+  font-size: 30px;
+
+}
+
+.Titulos2 .subtitulo3 {
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  margin-top: 5px; /* Dá um pequeno espaçamento entre o título e o subtítulo */
+}
+
+/* Contêiner principal de integrantes */
+.integrantes {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as divs se movam para uma nova linha se não houver espaço suficiente */
+  justify-content: center; /* Centraliza as divs horizontalmente */
+  gap: 40px; /* Espaço entre as divs dos integrantes */
+  margin-top: 50px;
+}
+
+/* Estilo para cada integrante */
+.integrante {
+  width: 30%; /* As divs ficarão lado a lado */
+  max-width: 600px; /* Limita a largura máxima */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #fff;
+  margin-bottom: 40px;
+  box-sizing: border-box; /* Garante que a largura definida inclua a margem/padding */
+}
+
+/* Nome e Sobrenome */
+.nomeSobrenome {
+  display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+  justify-content: center; /* Alinha ao centro */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 20px;
+}
+
+.nome {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: bold; /* Aplica negrito ao nome */
+  margin-right: 10px; /* Espaço entre nome e sobrenome */
+}
+
+.sobrenome {
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 30px;
+}
+
+/* Linha abaixo do nome */
+.linha {
+  width: 75%;
+  height: 3px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+/* Detalhes sobre o integrante */
+.detalhes {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-top: 20px;
+  width: 75%; /* Garante que a descrição tenha a mesma largura da linha */
+  margin-left: auto; /* Centraliza a div horizontalmente */
+  margin-right: auto; /* Centraliza a div horizontalmente */
+}
+
+.tituloDetalhe {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left; /* Alinha o título à esquerda */
+  margin-bottom: 20px; /* Aumenta o espaçamento entre o título e a descrição */
+}
+
+.descricao {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto da descrição */
+  margin-top: 10px;
+  max-width: 100%; /* Ajusta a largura máxima da descrição para 100% */
+  margin: 0 auto; /* Centraliza a descrição horizontalmente */
+}
+
+/* Redes Sociais */
+.socialTime {
+  display: flex;
+  justify-content: flex-start; /* Alinha as redes sociais à esquerda */
+  gap: 20px; /* Espaçamento entre as imagens */
+  margin-top: 20px; /* Espaço entre a descrição e as redes sociais */
+  width: 75%; /* Ajusta a largura para ficar do mesmo tamanho da descrição */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+}
+
+.socialTime a {
+  text-decoration: none;
+}
+
+.socialTime img {
+  width: 50px;
+  height: 47px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.socialTime img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Media Query para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .integrantes {
+    flex-direction: column; /* Organiza as divs verticalmente */
+    align-items: center; /* Centraliza as divs */
+  }
+
+  .integrante {
+    width: 80%; /* Faz com que cada integrante ocupe 80% da largura em telas pequenas */
+    margin-bottom: 30px; /* Espaço entre as divs na versão vertical */
+  }
+
+  .nomeSobrenome {
+    justify-content: center; /* Alinha nome e sobrenome ao centro na versão vertical */
+  }
+
+  .linha {
+    width: 80%; /* Ajusta a largura da linha para 80% em telas menores */
+  }
+
+  .detalhes {
+    width: 80%; /* Ajusta a largura da descrição para 80% em telas menores */
+  }
+
+  .socialTime{
+    justify-content: flex-start; /* Alinha as redes sociais à esquerda em telas pequenas */
+    width: 80%; /* Ajusta a largura para 80% em telas menores */
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para o rodapé */
+
+footer {
+  margin-top: 100px;
+  background-color: #161818;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+/* Container geral para os itens do rodapé */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Espaça os itens nas extremidades */
+  align-items: center;
+  gap: 30px; /* Espaçamento entre os itens */
+}
+
+/* Redes sociais do rodapé */
+
+.socialmedia2 {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  display: flex;
+  gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.socialmedia2 a {
+  text-decoration: none;
+}
+
+.socialmedia2 img {
+  width: 41px;
+  height: 38px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.socialmedia2 img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Rede sociais no rodapé */
+
+.nav2 a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Texto no rodapé */
+
+.nav2 p {
+  margin-top: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+/* Logos do jogo no rodapé */
+
+.logosdojogo {
+  position: absolute; /* Fixar a posição na tela */
+  bottom: 40px; /* Distância da parte inferior */
+  right: 30px; /* Distância da parte direita */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaçamento entre os logos */
+  z-index: 1; /* Garantir que o container fique acima de outros elementos */
+}
+
+.logosdojogo a {
+  text-decoration: none;
+}
+
+.logosdojogo .unity-logo img,
+.logosdojogo .trex-logo img {
+  opacity: 0.5; /* Define a opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.logosdojogo .unity-logo img {
+  width: 41px;
+  height: 38px;
+}
+
+.logosdojogo .unity-logo:hover img {
+  opacity: 1; /* Aumenta a opacidade no hover */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+.logosdojogo .trex-logo img {
+  width: 120px; /* Largura fixa para o logo do T-Rex */
+  margin-left: 15px; /* Ajuste de margem entre os logos */
+}
+
+.logosdojogo .trex-logo:hover img {
+  opacity: 1; /* Aumenta a opacidade no hover */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Separador entre os logos */
+
+.logosdojogo .separator {
+  width: 4px;
+  height: 20px; /* Altura do separador */
+  background-color: white;
+  margin: 0 15px;
+  opacity: 0.5; /* Define a opacidade inicial do separador */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
+}
+
+.logosdojogo .separator:hover {
+  opacity: 1; /* Aumenta a opacidade do separador */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Responsividade para telas pequenas */
+
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+    height: 200px;
+    padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
+  }
+
+  /* Muda para coluna quando em telas pequenas */
+
+  .footer-container {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+  /* Redes sociais do rodapé */
+
+  .socialmedia2 {
+    position: relative; /* Muda a posição das redes sociais para relativo */
+    top: 0;
+    left: 0;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 10px; /* Menor espaçamento entre os ícones */
+  }
+
+  /* Ajuste no alinhamento do texto */
+
+  .nav2 {
+    text-align: center; /* Garante que o texto esteja centralizado */
+  }
+
+  /* Ajuste na posição dos logos */
+  
+  .logosdojogo {
+    position: relative; /* Muda a posição das redes sociais para relativo */
+    top: 5px;
+    left: 0;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 10px; /* Menor espaçamento entre os ícones */
+  }
+
+  .logosdojogo .separator {
+    display: none; /* Oculta o separador entre os logos */
+  }
+}
+
