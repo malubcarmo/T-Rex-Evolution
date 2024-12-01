@@ -1,0 +1,469 @@
+/* Resetando margens e padding, além de definir box-sizing para todos os elementos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
+}
+
+
+body{
+  margin: 0;
+  padding: 30;
+  width: 100%;
+  height: 100%; 
+  width: 100%;
+}
+
+.banner {
+  width:  100%;
+  z-index: 0;
+ overflow-x: hidden;
+}
+.banner img {
+width:  100%;
+}
+
+/* Imagem de Fundo*/
+
+.background {
+  position: fixed; /* Fixa a imagem na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Preenche toda a tela */
+  z-index: -1; /* Coloca a imagem atrás de todos os outros elementos */
+  background-image: url('Imgs/bg.jpg');
+  background-position: center center;
+  background-size: cover;
+ background-repeat: no-repeat; /* Impede repetição */
+  background-attachment: fixed;
+}
+
+.background img {
+  width: 100%;
+  background-position: top left; /* Inicia a imagem do topo à esquerda */
+}
+
+/* Logo do site no canto superior esquerdo */
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 1;
+}
+
+.logo img {
+  width: 220px;
+  height: 58px;
+}
+
+/* Estilos para a navegação centralizada */
+
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+.nav a:hover {
+  background-color: #339878;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Ícones das redes sociais no canto superior direito */
+
+.socialmedia {
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  position: absolute;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  margin-left: 20px;
+  width: 41px;
+  height: 38px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.socialmedia img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Centraliza o conteúdo principal dentro do banner */
+
+.container {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Logo do T-Rex dentro do banner */
+
+.logoTrex img {
+  width: 580px;
+  height: 336px;
+  margin-top: 5px;
+}
+
+/* Botão de jogo (imagem clicável) */
+
+.buttomGame a img {
+  width: 352px;
+  height: 140px;
+  margin-top: 1px;
+  transition: transform 0.3s;
+}
+
+.buttomGame a img:hover {
+  transform: scale(1.1);
+}
+
+/* Conteudos de textos */
+
+.Texto {
+  color: #ffffff;
+  margin-top: 120px;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+.Texto .titulo {
+  margin-left: 30px;
+  font-size: 30px;
+  margin-bottom: 10px; /* Controle melhor do espaçamento entre título e subtítulo */
+}
+
+.Texto .subtitulo {
+  margin-left: 30px;
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  margin-top: 0; /* Caso precise ajustar o espaço do subtítulo em relação ao título */
+}
+
+/* Ativa a rolagem suave nesta área */ 
+
+.SobreHistoria {
+  scroll-behavior: smooth;  
+
+}
+.Conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+.Texto-conteudo {
+  margin-left: 30px;
+  flex: 1;
+  color:#ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 20px; /* Espaço entre o texto e a imagem */
+}
+
+/* Estilo para a img do "video" */
+
+.imagem-video {
+  flex: 1;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.imagem-video img {
+  width: 624px;
+  height: 413px;
+  border-radius: 15px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* Faz com que a imagem se ajuste corretamente dentro da caixa */
+}
+
+/* Galeria de imgs */
+
+.galeria{
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.imgGaleria {
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  height: 420px;
+  padding-bottom: 2px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;  /* Garante que a rolagem "grude" nas imagens */
+  scroll-behavior: smooth;  /* Rolagem suave */
+  z-index: 2; /* Coloca acima do fundo */
+}
+
+.slide_div{
+  flex-shrink: 0; /* Impede as imagens de encolher */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 20px;
+}
+
+.imgGaleria .img {
+  user-select: none; /* Impede a seleção de texto e evita o fundo azul */
+  position: relative;              /* Define a posição do elemento como relativa, permitindo o uso de posicionamento absoluto em elementos filhos, se necessário */
+  height: 371px;                  /* Define a altura da imagem como 370px */
+  width:  599px;                  /* Define a largura da imagem como 240px */
+  transition: 0.7s;                 /* Adiciona uma transição suave de 0.7 segundos para quaisquer mudanças de propriedades */
+  background-color: rgba(0, 0, 0, 0.4);  /* Define uma cor de fundo com opacidade de 40%, criando um sombreado levemente escuro */
+  border-radius: 20px;             /* Aplica um raio de borda de 20px, arredondando os cantos da imagem */
+}
+
+.imgGaleria .img:hover {
+  transform: scale(1.05);           /* Opcional: aumenta ligeiramente a imagem quando o mouse passa sobre ela */
+}
+
+/* Personalizando a barra de rolagem */
+
+.imgGaleria::-webkit-scrollbar {
+  height: 8px;  /* Define a altura da barra de rolagem horizontal */
+
+}
+
+.imgGaleria::-webkit-scrollbar-thumb {
+  background-color:  #238774;  /* Cor do "thumb" da barra de rolagem */ 
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.imgGaleria::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;   /* Cor do "thumb" ao passar o mouse */
+}
+
+.imgGaleria::-webkit-scrollbar-track {
+  background-color: rgba(139, 139, 139, 0.233);
+  border-radius: 10px;
+
+}
+
+/* Conteudo de textos2 */
+
+.Texto2 {
+  margin-top: 100px;
+  position: relative; /* Necessário para o z-index funcionar */
+  text-align: center;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+  color: #ffffff;
+}
+
+.Texto2 .titulo {
+  margin-right: 50px;
+   font-size: 30px;
+  margin-bottom: 10px; /* Controle melhor do espaçamento entre título e subtítulo */
+}
+
+.Texto2 .subtitulo {
+  margin-left: 80px;
+  font-size: 40px;
+  font-family: 'Retro Gaming', sans-serif;
+  margin-top: 0; /* Caso precise ajustar o espaço do subtítulo em relação ao título */
+}
+
+/* Estilo para o contêiner das imagens dos personagens */
+
+.personagens {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* Espaçamento entre os personagens */
+  margin-top: 80px; /* Margem superior */
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+.personagem {
+  text-align: center;
+}
+
+.personagem img {
+  width: 334px;
+  height: 369px;
+  border-radius: 15px; /* Bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+}
+
+.personagem:hover {
+  transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra maior no hover */
+}
+
+.descricao {
+  width: 334px;
+  height: 120px;
+  margin-top: -4px; /* Coloca a descrição colada abaixo da imagem */
+  background: #ffffff; /* Fundo branco semitransparente */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+.descricao p {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para o rodapé */
+
+footer {
+  margin-top: 100px;
+  background-color: #161818;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  position: relative; /* Necessário para o z-index funcionar */
+}
+
+/* Redes sociais do rodapé */
+
+.socialmedia2 {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.socialmedia2 a {
+  text-decoration: none;
+}
+
+.socialmedia2 img {
+  margin-left: 20px;
+  width: 41px;
+  height: 38px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.socialmedia2 img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Rede sociais no rodapé */
+
+.nav2 a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Texto no rodapé */
+
+.nav2 p {
+  margin-top: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+/* Logos do jogo no rodapé */
+
+.logosdojogo {
+  position: absolute; /* Fixar a posição na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 30px; /* Distância da parte direita */
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* Garantir que o container fique acima de outros elementos */
+}
+
+.logosdojogo a {
+  text-decoration: none;
+}
+
+.logosdojogo .unity-logo img,
+.logosdojogo .trex-logo img {
+  opacity: 0.5; /* Define a opacidade inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
+  height: auto; /* Manter a proporção da imagem */
+}
+
+.logosdojogo .unity-logo img {
+  width: 66px; /* Largura fixa para Unity */
+}
+
+.logosdojogo .unity-logo:hover img {
+  opacity: 1; /* Aumenta a opacidade no hover */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+.logosdojogo .trex-logo img {
+  width: 174px; /* Largura fixa para o logo do T-Rex */
+  margin-left: 15px; /* Ajuste de margem entre os logos */
+}
+
+.logosdojogo .trex-logo:hover img {
+  opacity: 1; /* Aumenta a opacidade no hover */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Separador entre os logos */
+
+.logosdojogo .separator {
+  width: 4px;
+  height: 30px; /* Altura do separador */
+  background-color: white;
+  margin: 0 15px;
+  opacity: 0.5; /* Define a opacidade inicial do separador */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
+}
+
+.logosdojogo .separator:hover {
+  opacity: 1; /* Aumenta a opacidade do separador */
+  transform: scale(1.1); /* Efeito de zoom */
+}
