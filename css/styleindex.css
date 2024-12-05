@@ -700,3 +700,16 @@ footer {
   width: 100%;
   background-position: top left; /* Inicia a imagem do topo à esquerda */
 }
+
+/* Media query para telas menores (exemplo: dispositivos móveis) */
+@media screen and (max-width: 768px) {
+  .background {
+    background-position: top center; /* Ajusta a posição do fundo */
+    background-size: auto 100%; /* Ajusta o tamanho da imagem para manter as proporções */
+    background-attachment: scroll; /* Remove o efeito de fundo fixo em telas pequenas */
+  }
+
+  .background img {
+    background-position: top center;
+  }
+}
