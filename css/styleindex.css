@@ -509,7 +509,7 @@ padding: 30px 30px;
 /* Estilos para o rodapé */
 
 footer {
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: #161818;
   text-align: center;
   padding: 20px 0;
@@ -701,27 +701,3 @@ footer {
   background-position: top left; /* Inicia a imagem do topo à esquerda */
 }
 
-/* Media query para telas menores (exemplo: dispositivos móveis) */
-@media screen and (max-width: 768px) {
-  .background {
-    background-position: top center; /* Ajusta a posição do fundo */
-    background-size: auto 100%; /* Ajusta o tamanho da imagem para manter as proporções */
-    background-attachment: scroll; /* Remove o efeito de fundo fixo em telas pequenas */
-  }
-
-  .background img {
-    background-position: top center;
-  }
-}
-/* Media query para telas muito pequenas (exemplo: smartphones em modo retrato) */
-@media screen and (max-width: 480px) {
-  .background {
-    background-position: top center; /* Ajusta ainda mais para garantir o melhor corte da imagem */
-    background-size: cover; /* Pode manter o 'cover' para garantir que a imagem preencha toda a tela */
-    background-attachment: scroll; /* Continua com o 'scroll' para evitar problemas de desempenho */
-  }
-
-  .background img {
-    background-position: top center; /* Mantém a imagem no topo centralizada */
-  }
-}
