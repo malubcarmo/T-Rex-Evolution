@@ -141,6 +141,58 @@
     margin-left: 120px;
     font-size: 16px;
 }
+/* Media Queries para responsividade */
+
+/* Para telas pequenas (como dispositivos móveis) */
+@media (max-width: 768px) {
+  .JOGO {
+      margin-top: 20px;
+      flex-direction: column;  /* Torna o layout vertical */
+  }
+
+  .jogo-video {
+      margin: 0 20px;  /* Adiciona margem lateral */
+      max-width: calc(100% - 40px);  /* Garante que a imagem ocupe a largura total menos a margem */
+  }
+
+  .Texto .titulo {
+      margin-right: 0;  /* Remove a margem lateral */
+      font-size: 24px;  /* Ajusta o tamanho da fonte */
+  }
+
+  .Texto .subtitulo {
+      font-size: 30px;  /* Ajusta o tamanho da fonte */
+  }
+
+  .Texto-conteudo li {
+      margin-left: 0;  /* Remove o excesso de margem à esquerda */
+      font-size: 14px;  /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  .Container1 {
+      padding: 20px;  /* Ajusta o padding */
+  }
+}
+
+/* Para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+  .Texto .titulo {
+      font-size: 20px;  /* Ajusta o tamanho da fonte ainda mais */
+  }
+
+  .Texto .subtitulo {
+      font-size: 26px;  /* Ajusta o tamanho da fonte ainda mais */
+  }
+
+  .Texto-conteudo li {
+      font-size: 12px;  /* Reduz ainda mais o tamanho da fonte */
+  }
+
+  .jogo-video {
+      margin: 0 10px;  /* Adiciona margem lateral menor para telas muito pequenas */
+      max-width: calc(100% - 20px);  /* Ajusta a largura da imagem para compensar a margem */
+  }
+}
 
 
 /* Estilos para o rodapé */
@@ -298,6 +350,7 @@ footer {
     /* Ajuste no alinhamento do texto */
     
     .nav2 {
+      margin-top: 8px;
       text-align: center; /* Garante que o texto esteja centralizado */
     }
     
