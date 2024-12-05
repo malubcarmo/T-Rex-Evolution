@@ -713,3 +713,15 @@ footer {
     background-position: top center;
   }
 }
+/* Media query para telas muito pequenas (exemplo: smartphones em modo retrato) */
+@media screen and (max-width: 480px) {
+  .background {
+    background-position: top center; /* Ajusta ainda mais para garantir o melhor corte da imagem */
+    background-size: cover; /* Pode manter o 'cover' para garantir que a imagem preencha toda a tela */
+    background-attachment: scroll; /* Continua com o 'scroll' para evitar problemas de desempenho */
+  }
+
+  .background img {
+    background-position: top center; /* Mantém a imagem no topo centralizada */
+  }
+}
