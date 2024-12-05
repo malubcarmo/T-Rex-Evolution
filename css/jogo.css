@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
+    
+  }
+  .background {
+    position: fixed; /* Fixa a imagem na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Preenche toda a tela */
+    z-index: -2; /* Coloca a imagem atrás de todos os outros elementos */
+    background-image: url('Imgs/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+   background-repeat: no-repeat; /* Impede repetição */
+    background-attachment: fixed;
+  }
+  
+  .background img {
+    width: 100%;
+    background-position: top left; /* Inicia a imagem do topo à esquerda */
+  }
+  
+  
+  /* Estilo do cabeçalho */
+  .cabecalho {
+  background-color: #161818;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do cabeçalho */
+  align-items: center; /* Alinha verticalmente */
+  padding: 0; /* Remover qualquer preenchimento para garantir que a logo esteja centralizada */
+  position: relative;
+  z-index: 1;
+  }
+  
+  .logo {
+    top: 15px;
+    left: 20px;
+    }
+    
+    .logo img {
+    width: 190px;
+    height: 28x;
+    }
+    
+  
+
+  /* Navegação Home, sobre e documentação */
+.nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+  }
+  
+  .nav a:hover {
+    background-color: #339878;
+    color: white;
+  }
+  
+
+  /* Estilo para a div "JOGO" */
+.JOGO {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a imagem */
+.jogo-video {
+    max-width: 100%;  /* Faz com que a imagem ocupe no máximo a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.Container1 {
+    margin-top: 80px;
+    padding: 30px 30px;
+    background-color: #ffffff;
+    border-top-left-radius: 50px;  /* Arredonda o canto superior esquerdo */
+    border-top-right-radius: 50px; /* Arredonda o canto superior direito */
+    text-align: center; /* Centraliza o conteúdo de texto dentro da div */
+}
+.Texto {
+    color: #000000;
+    z-index: 1;
+    position: relative; /* Necessário para o z-index funcionar */ 
+  }
+  
+  .Texto .titulo {
+    margin-right: 220px;
+    font-size: 30px;
+
+  }
+  
+  .Texto .subtitulo {
+    font-size: 40px;
+    font-family: 'Retro Gaming', sans-serif;
+  }
+
+/* Estilo para a div Conteudo */
+.Conteudo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo dentro da div */
+    gap: 20px;
+    width: 100%;
+}
+
+  /* Estilo para o conteúdo (lista de tópicos) */
+.Texto-conteudo ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    line-height: 1.6;
+    text-align: left; /* Garante que os itens da lista alinhem à esquerda */
+    margin: 0; /* Remove margens automáticas */
+}
+
+/* Estilo para os itens da lista */
+.Texto-conteudo li {
+    margin-left: 120px;
+    font-size: 16px;
+}
+
+
+/* Estilos para o rodapé */
+
+footer {
+    background-color: #161818;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    position: relative; /* Necessário para o z-index funcionar */
+    }
+    
+    /* Container geral para os itens do rodapé */
+    
+    .footer-container {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    align-items: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    }
+    
+    /* Redes sociais do rodapé */
+    
+    .socialmedia2 {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    }
+    
+    .socialmedia2 a {
+    text-decoration: none;
+    }
+    
+    .socialmedia2 img {
+    width: 41px;
+    height: 38px;
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+    }
+    
+    .socialmedia2 img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    }
+    
+    /* Rede sociais no rodapé */
+    
+    .nav2 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    }
+    
+    /* Texto no rodapé */
+    
+    .nav2 p {
+    margin-top: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    }
+    
+    /* Logos do jogo no rodapé */
+    
+    .logosdojogo {
+    position: absolute; /* Fixar a posição na tela */
+    bottom: 40px; /* Distância da parte inferior */
+    right: 30px; /* Distância da parte direita */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os logos */
+    z-index: 1; /* Garantir que o container fique acima de outros elementos */
+    }
+    
+    .logosdojogo a {
+    text-decoration: none;
+    }
+    
+    .logosdojogo .unity-logo img,
+    .logosdojogo .trex-logo img {
+    opacity: 0.5; /* Define a opacidade inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
+    height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .logosdojogo .unity-logo img {
+    width: 41px;
+    height: 38px;
+    }
+    
+    .logosdojogo .unity-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
+    }
+    
+    .logosdojogo .trex-logo img {
+    width: 120px; /* Largura fixa para o logo do T-Rex */
+    margin-left: 15px; /* Ajuste de margem entre os logos */
+    }
+    
+    .logosdojogo .trex-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
+    }
+    
+    /* Separador entre os logos */
+    
+    .logosdojogo .separator {
+    width: 4px;
+    height: 20px; /* Altura do separador */
+    background-color: white;
+    margin: 0 15px;
+    opacity: 0.5; /* Define a opacidade inicial do separador */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
+    }
+    
+    .logosdojogo .separator:hover {
+    opacity: 1; /* Aumenta a opacidade do separador */
+    transform: scale(1.1); /* Efeito de zoom */
+    }
+    
+    /* Responsividade para telas pequenas */
+    
+    @media (max-width: 768px) {
+    footer {
+      width: 100%;
+      height: 200px;
+      padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
+    }
+    
+    /* Muda para coluna quando em telas pequenas */
+    
+    .footer-container {
+      flex-direction: column; /* Empilha os itens verticalmente */
+      align-items: center; /* Centraliza os itens */
+      gap: 20px; /* Espaçamento entre os itens */
+    }
+    
+    /* Redes sociais do rodapé */
+    
+    .socialmedia2 {
+      position: relative; /* Muda a posição das redes sociais para relativo */
+      top: 0;
+      left: 0;
+      justify-content: center; /* Centraliza os ícones */
+      gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+    
+    /* Ajuste no alinhamento do texto */
+    
+    .nav2 {
+      text-align: center; /* Garante que o texto esteja centralizado */
+    }
+    
+    /* Ajuste na posição dos logos */
+    
+    .logosdojogo {
+      position: relative; /* Muda a posição das redes sociais para relativo */
+      top: 5px;
+      left: 0;
+      justify-content: center; /* Centraliza os ícones */
+      gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+    
+    .logosdojogo .separator {
+      display: none; /* Oculta o separador entre os logos */
+    }
+    }
