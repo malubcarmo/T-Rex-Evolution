@@ -3,69 +3,53 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
-
-    .background {
-        position: fixed; /* Fixa a imagem na tela */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; /* Preenche toda a tela */
-        z-index: -2; /* Coloca a imagem atrás de todos os outros elementos */
-        background-image: url('Imgs/bg.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat; /* Impede repetição */
-        background-attachment: fixed;
-        }
-        
-        .background img {
-        width: 100%;
-        background-position: top left; /* Inicia a imagem do topo à esquerda */
-        }
-        
-    
-  }
-  body {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    min-height: 100vh; /* Garante que a altura mínima seja a altura total da janela */
-    overflow-x: hidden;  /* Esconde a barra de rolagem horizontal */
 }
 
-  
-  
-  /* Estilo do cabeçalho */
-  .cabecalho {
-  background-color: #161818;
-  width: 100%;
-  height: 92px;
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo dentro do cabeçalho */
-  align-items: center; /* Alinha verticalmente */
-  padding: 0; /* Remover qualquer preenchimento para garantir que a logo esteja centralizada */
-  position: relative;
-  z-index: 1;
-  }
-  
-  .logo {
-  top: 15px;
-  left: 20px;
-  }
-  
-  .logo img {
-  width: 190px;
-  height: 28x;
-  }
+.background {
+    position: fixed; /* Fixa a imagem na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Preenche toda a tela */
+    z-index: -2; /* Coloca a imagem atrás de todos os outros elementos */
+    background-image: url('Imgs/bg.jpg');
+    background-position: center center; /* Centraliza a imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilo do cabeçalho */
+.cabecalho {
+    background-color: #161818;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do cabeçalho */
+    align-items: center; /* Alinha verticalmente */
+    padding: 0; /* Remover qualquer preenchimento para garantir que a logo esteja centralizada */
+    position: relative;
+    z-index: 1;
+    }
+    
+    .logo {
+    top: 15px;
+    left: 20px;
+    }
+    
+    .logo img {
+    width: 190px;
+    height: 28x;
+    }
 
 /* Estilo geral para o card */
 .Texto {
-    background-color:  white;
+    background-color: white;
     width: 80%; /* Largura do card */
     max-width: 450px; /* Largura máxima */
     margin: 50px auto; /* Centraliza o card na página */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
-
     overflow: hidden; /* Esconde conteúdo que ultrapasse as bordas arredondadas */
 }
 
@@ -103,12 +87,14 @@
 /* Efeito de sublinhado ao passar o mouse no e-mail */
 .email:hover {
     text-decoration: underline; /* Sublinha o e-mail ao passar o mouse */
-    color:rgb(18, 71, 114); /* Altera a cor para um tom mais escuro de verde */
+    color: rgb(18, 71, 114); /* Altera a cor para um tom mais escuro de verde */
 }
 
 
 /* Estilo do footer */
 footer {
+    position: relative;
+    z-index: 1;
     background-color: #161818;
     text-align: center;
     padding: 20px 20px;
@@ -256,3 +242,4 @@ footer {
         display: none; /* Oculta o separador entre os logos */
     }
 }
+
