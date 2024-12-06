@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Tipografia Poppins para todo o site */
+
+    .background {
+        position: fixed; /* Fixa a imagem na tela */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Preenche toda a tela */
+        z-index: -2; /* Coloca a imagem atrás de todos os outros elementos */
+        background-image: url('Imgs/bg.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat; /* Impede repetição */
+        background-attachment: fixed;
+        }
+        
+        .background img {
+        width: 100%;
+        background-position: top left; /* Inicia a imagem do topo à esquerda */
+        }
+        
+    
+  }
+  body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    min-height: 100vh; /* Garante que a altura mínima seja a altura total da janela */
+    overflow-x: hidden;  /* Esconde a barra de rolagem horizontal */
+}
+
+  
+  
+  /* Estilo do cabeçalho */
+  .cabecalho {
+  background-color: #161818;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do cabeçalho */
+  align-items: center; /* Alinha verticalmente */
+  padding: 0; /* Remover qualquer preenchimento para garantir que a logo esteja centralizada */
+  position: relative;
+  z-index: 1;
+  }
+  
+  .logo {
+  top: 15px;
+  left: 20px;
+  }
+  
+  .logo img {
+  width: 190px;
+  height: 28x;
+  }
+
+/* Estilo geral para o card */
+.Texto {
+    background-color:  white;
+    width: 80%; /* Largura do card */
+    max-width: 450px; /* Largura máxima */
+    margin: 50px auto; /* Centraliza o card na página */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+
+    overflow: hidden; /* Esconde conteúdo que ultrapasse as bordas arredondadas */
+}
+
+/* Estilo para o título */
+.Titulo {
+    background-color: #238774; /* Fundo verde */
+    color: white; /* Cor do texto do título */
+    padding: 20px; /* Espaçamento interno do título */
+    font-size: 35px; /* Tamanho do título */
+    margin: 0; /* Remove a margem padrão do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo para o corpo do card (parte branca) */
+.message, .email {
+    padding: 20px 20px;
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Estilo para o texto da mensagem */
+.message {
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o e-mail */
+.email {
+    text-align: center; /* Centraliza o título */
+    font-size: 18px;
+    color: rgb(50, 129, 194);
+    text-decoration: none; /* Remove o sublinhado por padrão */
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de sublinhado ao passar o mouse no e-mail */
+.email:hover {
+    text-decoration: underline; /* Sublinha o e-mail ao passar o mouse */
+    color:rgb(18, 71, 114); /* Altera a cor para um tom mais escuro de verde */
+}
+
+
+/* Estilo do footer */
+footer {
+    background-color: #161818;
+    text-align: center;
+    padding: 20px 20px;
+    width: 100%;
+    min-height: 120px; /* Altura mínima para o rodapé */
+    display: flex;
+    justify-content: space-between; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: auto; /* Faz o rodapé se mover para o final da página */
+}
+
+/* Container geral para os itens do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    align-items: center;
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+/* Redes sociais do rodapé */
+.socialmedia2 {
+    position: relative; /* Muda a posição das redes sociais para relativo */
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    justify-content: center; /* Centraliza os ícones */
+}
+
+.socialmedia2 a {
+    text-decoration: none;
+}
+
+.socialmedia2 img {
+    width: 41px;
+    height: 38px;
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.socialmedia2 img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Navegação do rodapé */
+.nav2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav2 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Texto no rodapé */
+.nav2 p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+/* Logos do jogo no rodapé */
+.logosdojogo {
+    position: relative; /* Muda a posição para relativo */
+    display: flex;
+    gap: 15px; /* Espaçamento entre os logos */
+    justify-content: center; /* Centraliza os logos */
+}
+
+.logosdojogo a {
+    text-decoration: none;
+}
+
+.logosdojogo .unity-logo img,
+.logosdojogo .trex-logo img {
+    opacity: 0.5; /* Define a opacidade inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.logosdojogo .unity-logo img {
+    width: 41px;
+    height: 38px;
+}
+
+.logosdojogo .unity-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
+}
+
+.logosdojogo .trex-logo img {
+    width: 120px; /* Largura fixa para o logo do T-Rex */
+    margin-left: 15px; /* Ajuste de margem entre os logos */
+}
+
+.logosdojogo .trex-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Separador entre os logos */
+.logosdojogo .separator {
+    width: 4px;
+    height: 20px; /* Altura do separador */
+    background-color: white;
+    margin: 0 15px;
+    opacity: 0.5; /* Define a opacidade inicial do separador */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
+}
+
+.logosdojogo .separator:hover {
+    opacity: 1; /* Aumenta a opacidade do separador */
+    transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        height: auto; /* Não fixa mais a altura */
+        padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+
+    .socialmedia2 {
+        gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+
+    .logosdojogo {
+        flex-direction: column; /* Empilha os logos verticalmente */
+        gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+
+    .logosdojogo .separator {
+        display: none; /* Oculta o separador entre os logos */
+    }
+}
