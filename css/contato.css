@@ -273,7 +273,7 @@ footer {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
         padding: 20px 10px;
     }
 
