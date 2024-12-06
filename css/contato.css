@@ -273,7 +273,7 @@ footer {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        min-height: auto;
+        height: auto;
         padding: 20px 10px;
     }
 
@@ -299,5 +299,45 @@ footer {
     .background {
         height: auto; /* A altura se ajusta ao conteúdo */
         min-height: 100vh; /* Garante que a imagem ocupe a tela inteira */
+    }
+}
+
+/* Responsividade para telas muito pequenas (máximo de 480px) */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 5px; /* Reduz o padding para telas menores */
+    }
+
+    .footer-container {
+        gap: 15px; /* Reduz o espaçamento entre os itens no rodapé */
+    }
+
+    .socialmedia2 {
+        gap: 8px; /* Reduz o espaçamento entre os ícones das redes sociais */
+    }
+
+    .logosdojogo {
+        gap: 5px; /* Reduz o espaçamento entre os logos do jogo */
+    }
+
+    /* Ajuste no tamanho dos ícones de redes sociais */
+    .socialmedia2 img {
+        width: 35px; /* Ajusta o tamanho para telas menores */
+        height: 32px; /* Ajusta o tamanho */
+    }
+
+    /* Ajusta o tamanho das imagens dos logos do jogo */
+    .logosdojogo .unity-logo img,
+    .logosdojogo .trex-logo img {
+        width: 35px; /* Ajusta a largura dos logos */
+    }
+
+    /* Reduz o tamanho da fonte do texto do rodapé */
+    .nav2 p {
+        font-size: 10px; /* Diminui o tamanho da fonte para telas pequenas */
+    }
+
+    .nav2 a {
+        font-size: 14px; /* Diminui o tamanho da fonte dos links */
     }
 }
