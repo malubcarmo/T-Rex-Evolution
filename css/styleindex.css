@@ -149,7 +149,7 @@ header  {
 .buttomGame a img {
   width: 352px;
   height: 140px;
-  margin-top: 1px;
+  margin-top: 10px;
   transition: transform 0.3s;
 }
 
@@ -172,7 +172,7 @@ header  {
   /* Ajustar o botão de jogo para telas médias */
   .buttomGame a img {
     width: 80vw; /* O botão ocupa 80% da largura da tela */
-    max-width: 300px; /* Ajuste conforme necessário */
+    max-width: 352px; /* Ajuste conforme necessário */
   }
 }
 
@@ -184,13 +184,13 @@ header  {
   /* Ajustar logo para telas menores (até 480px) */
   .logoTrex img {
     width: 60vw; /* Logo ocupa 70% da largura da tela */
-    max-width: 300px; /* Máximo de largura para logo */
+    max-width: 400px; /* Máximo de largura para logo */
   }
 
   /* Ajustar o botão de jogo para telas menores */
   .buttomGame a img {
     width: 60vw; /* O botão ocupa 80% da largura da tela */
-    max-width: 252px; /* Ajuste conforme necessário */
+    max-width: 352px; /* Ajuste conforme necessário */
   }
 }
 
@@ -202,13 +202,13 @@ header  {
   /* Ajustar logo para telas extra pequenas (até 380px) */
   .logoTrex img {
     width: 60vw; /* Logo ocupa 60% da largura da tela */
-    max-width: 252px; /* Máximo de largura para logo */
+    max-width: 400px; /* Máximo de largura para logo */
   }
 
   /* Ajustar o botão de jogo para telas extra pequenas */
   .buttomGame a img {
     width: 60vw; /* O botão ocupa 70% da largura da tela */
-    max-width: 152px; /* Ajuste conforme necessário */
+    max-width: 352px; /* Ajuste conforme necessário */
   }
 }
 
@@ -348,7 +348,7 @@ header  {
   min-height: 100vh;  /* A div vai ocupar toda a altura da tela */
   z-index: 1; /* Definindo a base para a div */
   padding-bottom: 50px;
-  top: 0;
+  margin-top: 0; /* Garantir que a div não tenha margem superior adicional */
 }
 
 /* Estilo da imagem de fundo */
@@ -365,21 +365,24 @@ header  {
 
 .Container1 {
   padding: 30px 30px;
-  }
+  
+}
   
   
   .Texto {
+    margin-top: 180px; /* Espaçamento entre o header e a div Container1 */
     color: #ffffff;
     z-index: 1;
     position: relative; /* Necessário para o z-index funcionar */ 
+   
   }
   
   .Texto .titulo {
     font-size: 30px;
-    margin-top: 140px;
   }
   
   .Texto .subtitulo {
+    margin-top: 10px;
     font-size: 40px;
     font-family: 'Retro Gaming', sans-serif;
   }
@@ -388,7 +391,7 @@ header  {
   /* Conteudo + Img */
   
   .Conteudo {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;              /* Alinha os itens na horizontal */
     justify-content: space-between; /* Espaço entre o texto e a imagem */
     align-items: center;        /* Alinha verticalmente no centro */
@@ -609,7 +612,7 @@ header  {
   }
 
   .personagem {
-    width: 70%; /* Ajusta a largura para 45% em telas menores */
+    width:  90%; /* Ajusta a largura para 45% em telas menores */
     margin-bottom: 20px; /* Mantém o espaço na parte inferior */
   }
 
