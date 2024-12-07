@@ -508,6 +508,40 @@ header  {
       border-radius: 10px;
     
     }
+
+    /* Responsividade para telas menores (tablet e mobile) */
+@media (max-width: 768px) {
+  .imgGaleria {
+    height: 300px; /* Reduz a altura da galeria em telas menores */
+  }
+
+  .imgGaleria .img {
+    height: 250px; /* Reduz a altura das imagens */
+    width: 400px; /* Reduz a largura das imagens */
+    margin: 0 15px; /* Ajusta a margem das imagens */
+  }
+
+  .slide_div {
+    margin: 0 10px; /* Ajusta a margem entre os slides */
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+  .imgGaleria {
+    height: 200px; /* Reduz a altura da galeria em telas muito pequenas */
+  }
+
+  .imgGaleria .img {
+    height: 180px; /* Reduz ainda mais a altura das imagens */
+    width: 300px; /* Reduz ainda mais a largura das imagens */
+    margin: 0 10px; /* Ajusta a margem das imagens */
+  }
+
+  .slide_div {
+    margin: 0 5px; /* Ajusta a margem entre os slides */
+  }
+}
   
     
   /* Conteudo sobre os personagens */
@@ -533,6 +567,40 @@ header  {
       font-family: 'Retro Gaming', sans-serif;
       margin-top: 0; /* Caso precise ajustar o espaço do subtítulo em relação ao título */
     }
+
+    /* Responsividade para telas menores (tablet e mobile) */
+@media (max-width: 768px) {
+  .Texto2 {
+    margin-top: 60px; /* Reduz o espaçamento entre o topo e o texto */
+  }
+
+  .Texto2 .titulo {
+    font-size: 22px; /* Ajusta o tamanho da fonte do título */
+    margin-right: 20px; /* Reduz o espaçamento à direita */
+  }
+
+  .Texto2 .subtitulo {
+    font-size: 26px; /* Ajusta o tamanho da fonte do subtítulo */
+    margin-left: 20px; /* Reduz o espaçamento à esquerda */
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+  .Texto2 {
+    margin-top: 40px; /* Reduz ainda mais o espaçamento */
+  }
+
+  .Texto2 .titulo {
+    font-size: 22px; /* Tamanho menor para o título em telas pequenas */
+    margin-right: 0; /* Remove o espaçamento à direita */
+  }
+
+  .Texto2 .subtitulo {
+    font-size: 28px; /* Tamanho menor para o subtítulo */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+  }
+}
   
   /* Estilo para o contêiner das imagens */
   
