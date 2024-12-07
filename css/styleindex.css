@@ -6,13 +6,16 @@
 }
 
 
+/* Estilo para o body */
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden; /* Impedir rolagem horizontal */
+  background-color: #3c454e;
 }
+
 
 
 /* Responsividade para elementos */
@@ -338,28 +341,6 @@ header  {
   .menu-toggle {
     display: block; /* Exibe o hambúrguer em telas pequenas */
   }
-}
-
-
-
-/* Estilo para a div .background */
-.background {
-  position: relative; /* Necessário para usar z-index nas camadas internas */
-  min-height: 100vh;  /* A div vai ocupar toda a altura da tela */
-  z-index: 1; /* Definindo a base para a div */
-  padding-bottom: 50px;
-  margin-top: 0; /* Garantir que a div não tenha margem superior adicional */
-}
-
-/* Estilo da imagem de fundo */
-#background-image {
-  position: absolute; /* Faz a imagem ocupar a div inteira */
-  top: 0;
-  left: 0;
-  width: 100%; /* A imagem ocupa toda a largura da div */
-  height: 100%; /* A imagem ocupa toda a altura da div */
-  object-fit: cover; /* A imagem vai cobrir toda a div sem distorção */
-  z-index: -1; /* A imagem ficará atrás do conteúdo */
 }
 
 
