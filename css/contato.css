@@ -166,200 +166,175 @@ body {
 
 }
 
+/* Estilos para o rodapé */
 
-/* Estilo do footer */
 footer {
-    position: relative;
-    z-index: 1;
     background-color: #161818;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 0;
     width: 100%;
-    min-height: 120px;
+    height: 120px;
+    z-index: 1;
+    position: relative; /* Necessário para o z-index funcionar */
+    }
+    
+    /* Container geral para os itens do rodapé */
+    
+    .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaça os itens nas extremidades */
     align-items: center;
-    margin-top: auto;
-}
-
-/* Container geral para os itens do rodapé */
-.footer-container {
+    gap: 30px; /* Espaçamento entre os itens */
+    }
+    
+    /* Redes sociais do rodapé */
+    
+    .socialmedia2 {
+    position: absolute;
+    top: 40px;
+    left: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Redes sociais do rodapé */
-.socialmedia2 {
-    position: relative;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.socialmedia2 a {
+    gap: 20px; /* Espaçamento entre os ícones */
+    }
+    
+    .socialmedia2 a {
     text-decoration: none;
-}
-
-.socialmedia2 img {
+    }
+    
+    .socialmedia2 img {
     width: 41px;
     height: 38px;
     opacity: 0.5;
     transition: opacity 0.3s, transform 0.3s;
-}
-
-.socialmedia2 img:hover {
+    }
+    
+    .socialmedia2 img:hover {
     opacity: 1;
     transform: scale(1.1);
-}
-
-/* Navegação do rodapé */
-.nav2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav2 a {
+    }
+    
+    /* Rede sociais no rodapé */
+    
+    .nav2 a {
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: bold;
-}
-
-/* Texto no rodapé */
-.nav2 p {
+    }
+    
+    /* Texto no rodapé */
+    
+    .nav2 p {
+    margin-top: 10px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-}
-
-/* Logos do jogo no rodapé */
-.logosdojogo {
-    position: relative;
+    }
+    
+    /* Logos do jogo no rodapé */
+    
+    .logosdojogo {
+    position: absolute; /* Fixar a posição na tela */
+    bottom: 40px; /* Distância da parte inferior */
+    right: 30px; /* Distância da parte direita */
     display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.logosdojogo a {
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os logos */
+    z-index: 1; /* Garantir que o container fique acima de outros elementos */
+    }
+    
+    .logosdojogo a {
     text-decoration: none;
-}
-
-.logosdojogo .unity-logo img,
-.logosdojogo .trex-logo img {
-    opacity: 0.5;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    height: auto;
-}
-
-.logosdojogo .unity-logo img {
-    width: 41px;
-    height: 38px;
-}
-
-.logosdojogo .unity-logo:hover img {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.logosdojogo .trex-logo img {
-    width: 120px;
-    margin-left: 15px;
-}
-
-.logosdojogo .trex-logo:hover img {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* Separador entre os logos */
-.logosdojogo .separator {
-    width: 4px;
-    height: 20px;
-    background-color: white;
-    margin: 0 15px;
-    opacity: 0.5;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.logosdojogo .separator:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        height: auto;
-        padding: 20px 10px;
     }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .socialmedia2 {
-        gap: 10px;
-    }
-
-    .logosdojogo {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logosdojogo .separator {
-        display: none;
-    }
-
-    .background {
-        height: auto; /* A altura se ajusta ao conteúdo */
-        min-height: 100vh; /* Garante que a imagem ocupe a tela inteira */
-    }
-}
-
-/* Responsividade para telas muito pequenas (máximo de 480px) */
-@media (max-width: 480px) {
-    footer {
-        padding: 15px 5px; /* Reduz o padding para telas menores */
-    }
-
-    .footer-container {
-        gap: 15px; /* Reduz o espaçamento entre os itens no rodapé */
-    }
-
-    .socialmedia2 {
-        gap: 8px; /* Reduz o espaçamento entre os ícones das redes sociais */
-    }
-
-    .logosdojogo {
-        gap: 5px; /* Reduz o espaçamento entre os logos do jogo */
-    }
-
-    /* Ajuste no tamanho dos ícones de redes sociais */
-    .socialmedia2 img {
-        width: 35px; /* Ajusta o tamanho para telas menores */
-        height: 32px; /* Ajusta o tamanho */
-    }
-
-    /* Ajusta o tamanho das imagens dos logos do jogo */
+    
     .logosdojogo .unity-logo img,
     .logosdojogo .trex-logo img {
-        width: 35px; /* Ajusta a largura dos logos */
+    opacity: 0.5; /* Define a opacidade inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
+    height: auto; /* Mantém a proporção da imagem */
     }
-
-    /* Reduz o tamanho da fonte do texto do rodapé */
-    .nav2 p {
-        font-size: 10px; /* Diminui o tamanho da fonte para telas pequenas */
+    
+    .logosdojogo .unity-logo img {
+    width: 41px;
+    height: 38px;
     }
-
-    .nav2 a {
-        font-size: 14px; /* Diminui o tamanho da fonte dos links */
+    
+    .logosdojogo .unity-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
     }
-}
+    
+    .logosdojogo .trex-logo img {
+    width: 120px; /* Largura fixa para o logo do T-Rex */
+    margin-left: 15px; /* Ajuste de margem entre os logos */
+    }
+    
+    .logosdojogo .trex-logo:hover img {
+    opacity: 1; /* Aumenta a opacidade no hover */
+    transform: scale(1.1); /* Efeito de zoom */
+    }
+    
+    /* Separador entre os logos */
+    
+    .logosdojogo .separator {
+    width: 4px;
+    height: 20px; /* Altura do separador */
+    background-color: white;
+    margin: 0 15px;
+    opacity: 0.5; /* Define a opacidade inicial do separador */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
+    }
+    
+    .logosdojogo .separator:hover {
+    opacity: 1; /* Aumenta a opacidade do separador */
+    transform: scale(1.1); /* Efeito de zoom */
+    }
+    
+    /* Responsividade para telas pequenas */
+    
+    @media (max-width: 768px) {
+    footer {
+      width: 100%;
+      height: 200px;
+      padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
+    }
+    
+    /* Muda para coluna quando em telas pequenas */
+    
+    .footer-container {
+      flex-direction: column; /* Empilha os itens verticalmente */
+      align-items: center; /* Centraliza os itens */
+      gap: 20px; /* Espaçamento entre os itens */
+    }
+    
+    /* Redes sociais do rodapé */
+    
+    .socialmedia2 {
+      position: relative; /* Muda a posição das redes sociais para relativo */
+      top: 0;
+      left: 0;
+      justify-content: center; /* Centraliza os ícones */
+      gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+    
+    /* Ajuste no alinhamento do texto */
+    
+    .nav2 {
+      text-align: center; /* Garante que o texto esteja centralizado */
+    }
+    
+    /* Ajuste na posição dos logos */
+    
+    .logosdojogo {
+      position: relative; /* Muda a posição das redes sociais para relativo */
+      top: 5px;
+      left: 0;
+      justify-content: center; /* Centraliza os ícones */
+      gap: 10px; /* Menor espaçamento entre os ícones */
+    }
+    
+    .logosdojogo .separator {
+      display: none; /* Oculta o separador entre os logos */
+    }
+    }
