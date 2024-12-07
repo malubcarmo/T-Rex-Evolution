@@ -17,16 +17,6 @@ body {
 }
 
 
-
-/* Responsividade para elementos */
-@media (max-width: 768px) {
-  body {
-    width: 100%;
-    height: 100%;
-  }
-
-}
-
 /* Banner do jogo*/
 
 .banner {
@@ -368,6 +358,35 @@ header  {
     font-family: 'Retro Gaming', sans-serif;
   }
   
+  /* Responsividade para telas menores (mobile) */
+@media (max-width: 768px) {
+  .Texto {
+    margin-top: 30px; /* Reduz o espaçamento entre o header e a div Container1 */
+  }
+
+  .Texto .titulo {
+    font-size: 26px; /* Ajusta o tamanho da fonte do título em telas menores */
+  }
+
+  .Texto .subtitulo {
+    font-size: 30px; /* Ajusta o tamanho da fonte do subtítulo em telas menores */
+  }
+}
+
+/* Responsividade para telas muito pequenas (ex: celulares pequenos) */
+@media (max-width: 480px) {
+  .Texto {
+    margin-top: 20px; /* Reduz ainda mais o espaçamento em telas muito pequenas */
+  }
+
+  .Texto .titulo {
+    font-size: 22px; /* Reduz o tamanho da fonte do título em telas pequenas */
+  }
+
+  .Texto .subtitulo {
+    font-size: 26px; /* Reduz o tamanho da fonte do subtítulo em telas pequenas */
+  }
+}
   
   /* Conteudo + Img */
   
