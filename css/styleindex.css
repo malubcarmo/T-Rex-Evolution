@@ -512,12 +512,12 @@ header  {
     /* Responsividade para telas menores (tablet e mobile) */
 @media (max-width: 768px) {
   .imgGaleria {
-    height: 300px; /* Reduz a altura da galeria em telas menores */
+    height: 320px; /* Reduz a altura da galeria em telas menores */
   }
 
   .imgGaleria .img {
-    height: 250px; /* Reduz a altura das imagens */
-    width: 400px; /* Reduz a largura das imagens */
+    height: 271px; /* Reduz a altura das imagens */
+    width: 499px; /* Reduz a largura das imagens */
     margin: 0 15px; /* Ajusta a margem das imagens */
   }
 
@@ -529,12 +529,12 @@ header  {
 /* Responsividade para telas muito pequenas (celulares pequenos) */
 @media (max-width: 480px) {
   .imgGaleria {
-    height: 200px; /* Reduz a altura da galeria em telas muito pequenas */
+    height:320px; /* Reduz a altura da galeria em telas muito pequenas */
   }
 
   .imgGaleria .img {
-    height: 180px; /* Reduz ainda mais a altura das imagens */
-    width: 300px; /* Reduz ainda mais a largura das imagens */
+    height: 271px; /* Reduz ainda mais a altura das imagens */
+    width: 399px; /* Reduz ainda mais a largura das imagens */
     margin: 0 10px; /* Ajusta a margem das imagens */
   }
 
