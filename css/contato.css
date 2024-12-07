@@ -116,14 +116,12 @@ body {
     /* Reduz o tamanho do card e ajusta a largura */
     .Texto {
         width: 90%; /* Largura maior para se ajustar melhor em telas pequenas */
-        margin: 20px auto; /* Diminui a margem para telas menores */
-        padding: 15px; /* Reduz o padding para otimizar o espaço */
+        margin: 30px auto; /* Diminui a margem para telas menores */
     }
 
     /* Ajusta o título para ficar menor em telas pequenas */
     .Titulo {
         font-size: 28px; /* Reduz o tamanho da fonte */
-        padding: 15px; /* Diminui o padding */
     }
 
     /* Ajuste do tamanho do texto da mensagem */
@@ -140,8 +138,8 @@ body {
 /* Responsividade para telas muito pequenas (ex: celulares pequenos) */
 @media (max-width: 480px) {
     .Texto {
-        width: 95%; /* Maior largura para telas muito pequenas */
-        margin: 10px auto; /* Margem menor */
+        width: 80%; /* Maior largura para telas muito pequenas */
+        margin: 30px auto; /* Margem menor */
     }
 
     .Titulo {
@@ -155,7 +153,19 @@ body {
     .email {
         font-size: 14px; /* Reduz o tamanho da fonte do e-mail */
     }
+} 
+
+/* Ajuste para garantir que o conteúdo fique centralizado na tela, sem sobrecarregar a margem */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espaça conteúdo de header e rodapé */
+        height: 100vh; /* A altura da tela é ocupada */
+    }
+
 }
+
 
 /* Estilo do footer */
 footer {
