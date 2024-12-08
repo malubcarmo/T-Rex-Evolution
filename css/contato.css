@@ -9,36 +9,15 @@ html, body {
     height: 100%; /* Garante que o HTML e o body tenham altura total */
 }
 
+/* Estilo para o body */
 body {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos do body de forma vertical */
-    min-height: 100vh; /* Garante que o body ocupe 100% da altura da tela */
-}
-
-/* Fixo o background com altura ajustada para dispositivos móveis */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100%; /* Ocupa 100% da altura da tela */
-    z-index: -2;
-    background-image: url('Imgs/bg.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Responsividade para telas pequenas - Máximo 768px */
-@media (max-width: 768px) {
-    .background {
-        background-attachment: scroll; /* Desativa o fixed para evitar problemas em dispositivos móveis */
-        height: auto; /* A altura do background se ajusta ao conteúdo */
-        min-height: 100vh; /* Garante que a imagem ocupe toda a altura da tela, sem ultrapassar o footer */
-    }
-}
-
+    height: 100%;
+    overflow-x: hidden; /* Impedir rolagem horizontal */
+    background-color: #3c454e;
+  }
 
 
 /* Estilo do cabeçalho */
@@ -68,7 +47,7 @@ body {
 .Texto {
     background-color: white;
     width: 80%;
-    max-width: 450px;
+    max-width: 500px;
     margin: 50px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -174,67 +153,69 @@ footer {
     padding: 20px 0;
     width: 100%;
     height: 120px;
-    z-index: 1;
-    position: relative; /* Necessário para o z-index funcionar */
-    }
-    
-    /* Container geral para os itens do rodapé */
-    
-    .footer-container {
+    position: fixed; /* Alteração para fixar o rodapé na parte inferior */
+    bottom: 0; /* Garante que o rodapé fique sempre no final */
+    left: 0; /* Ajusta a posição para a esquerda */
+    z-index: 1000; /* Garante que o rodapé ficará sobre outros elementos */
+}
+  
+  /* Container geral para os itens do rodapé */
+  
+  .footer-container {
     display: flex;
     justify-content: space-between; /* Espaça os itens nas extremidades */
     align-items: center;
     gap: 30px; /* Espaçamento entre os itens */
-    }
-    
-    /* Redes sociais do rodapé */
-    
-    .socialmedia2 {
+  }
+  
+  /* Redes sociais do rodapé */
+  
+  .socialmedia2 {
     position: absolute;
     top: 40px;
     left: 20px;
     display: flex;
     gap: 20px; /* Espaçamento entre os ícones */
-    }
-    
-    .socialmedia2 a {
+  }
+  
+  .socialmedia2 a {
     text-decoration: none;
-    }
-    
-    .socialmedia2 img {
+  }
+  
+  .socialmedia2 img {
     width: 41px;
     height: 38px;
     opacity: 0.5;
     transition: opacity 0.3s, transform 0.3s;
-    }
-    
-    .socialmedia2 img:hover {
+  }
+  
+  .socialmedia2 img:hover {
     opacity: 1;
     transform: scale(1.1);
-    }
-    
-    /* Rede sociais no rodapé */
-    
-    .nav2 a {
+  }
+  
+  /* Rede sociais no rodapé */
+  
+  .nav2 a {
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    }
-    
-    /* Texto no rodapé */
-    
-    .nav2 p {
+  }
+  
+  /* Texto no rodapé */
+  
+  .nav2 p {
     margin-top: 10px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-    }
-    
-    /* Logos do jogo no rodapé */
-    
-    .logosdojogo {
+  }
+  
+  /* Logos do jogo no rodapé */
+  
+  .logosdojogo {
     position: absolute; /* Fixar a posição na tela */
     bottom: 40px; /* Distância da parte inferior */
     right: 30px; /* Distância da parte direita */
@@ -242,74 +223,74 @@ footer {
     align-items: center;
     gap: 15px; /* Espaçamento entre os logos */
     z-index: 1; /* Garantir que o container fique acima de outros elementos */
-    }
-    
-    .logosdojogo a {
+  }
+  
+  .logosdojogo a {
     text-decoration: none;
-    }
-    
-    .logosdojogo .unity-logo img,
-    .logosdojogo .trex-logo img {
+  }
+  
+  .logosdojogo .unity-logo img,
+  .logosdojogo .trex-logo img {
     opacity: 0.5; /* Define a opacidade inicial */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
     height: auto; /* Mantém a proporção da imagem */
-    }
-    
-    .logosdojogo .unity-logo img {
+  }
+  
+  .logosdojogo .unity-logo img {
     width: 41px;
     height: 38px;
-    }
-    
-    .logosdojogo .unity-logo:hover img {
+  }
+  
+  .logosdojogo .unity-logo:hover img {
     opacity: 1; /* Aumenta a opacidade no hover */
     transform: scale(1.1); /* Efeito de zoom */
-    }
-    
-    .logosdojogo .trex-logo img {
+  }
+  
+  .logosdojogo .trex-logo img {
     width: 120px; /* Largura fixa para o logo do T-Rex */
     margin-left: 15px; /* Ajuste de margem entre os logos */
-    }
-    
-    .logosdojogo .trex-logo:hover img {
+  }
+  
+  .logosdojogo .trex-logo:hover img {
     opacity: 1; /* Aumenta a opacidade no hover */
     transform: scale(1.1); /* Efeito de zoom */
-    }
-    
-    /* Separador entre os logos */
-    
-    .logosdojogo .separator {
+  }
+  
+  /* Separador entre os logos */
+  
+  .logosdojogo .separator {
     width: 4px;
     height: 20px; /* Altura do separador */
     background-color: white;
     margin: 0 15px;
     opacity: 0.5; /* Define a opacidade inicial do separador */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
-    }
-    
-    .logosdojogo .separator:hover {
+  }
+  
+  .logosdojogo .separator:hover {
     opacity: 1; /* Aumenta a opacidade do separador */
     transform: scale(1.1); /* Efeito de zoom */
-    }
-    
-    /* Responsividade para telas pequenas */
-    
-    @media (max-width: 768px) {
+  }
+  
+  /* Responsividade para telas pequenas */
+  
+  @media (max-width: 768px) {
     footer {
       width: 100%;
       height: 200px;
       padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
     }
-    
+  
     /* Muda para coluna quando em telas pequenas */
-    
+  
     .footer-container {
       flex-direction: column; /* Empilha os itens verticalmente */
       align-items: center; /* Centraliza os itens */
       gap: 20px; /* Espaçamento entre os itens */
     }
-    
+  
     /* Redes sociais do rodapé */
-    
+  
     .socialmedia2 {
       position: relative; /* Muda a posição das redes sociais para relativo */
       top: 0;
@@ -317,13 +298,13 @@ footer {
       justify-content: center; /* Centraliza os ícones */
       gap: 10px; /* Menor espaçamento entre os ícones */
     }
-    
+  
     /* Ajuste no alinhamento do texto */
-    
+  
     .nav2 {
       text-align: center; /* Garante que o texto esteja centralizado */
     }
-    
+  
     /* Ajuste na posição dos logos */
     
     .logosdojogo {
@@ -333,8 +314,10 @@ footer {
       justify-content: center; /* Centraliza os ícones */
       gap: 10px; /* Menor espaçamento entre os ícones */
     }
-    
+  
     .logosdojogo .separator {
       display: none; /* Oculta o separador entre os logos */
     }
-    }
+  }
+  /* Imagem de Fundo para o site */
+  
