@@ -5,11 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-    height: 100%; /* Garante que o HTML e o body tenham altura total */
-}
-
-/* Estilo para o body */
 body {
     margin: 0;
     padding: 0;
@@ -17,8 +12,10 @@ body {
     height: 100%;
     overflow-x: hidden; /* Impedir rolagem horizontal */
     background-color: #3c454e;
-  }
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o body ocupe 100% da altura da tela */
+}
 
 /* Estilo do cabeçalho */
 .cabecalho {
@@ -43,25 +40,29 @@ body {
     height: 28x;
     }
 
-/* Estilo geral para o card */
+/* Estilo do card Texto */
 .Texto {
-    background-color: white;
-    width: 80%;
-    max-width: 500px;
-    margin: 50px auto;
+    background-color: white; /* Corpo do card permanece branco */
+    width: 100%; /* Tamanho de 100% para ocupar o máximo de largura possível */
+    max-width: 450px; /* Limitar a largura máxima a 450px */
+    margin: 50px auto; /* Centraliza o card horizontalmente com uma margem superior e inferior */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    padding: 0; /* Remove o padding global do card para que o título ocupe toda a parte superior */
+    flex-grow: 1; /* Faz com que ocupe o espaço disponível entre o cabeçalho e o rodapé */
+    box-sizing: border-box; /* Para garantir que o padding não afete a largura total */
 }
 
 /* Estilo para o título */
 .Titulo {
-    background-color: #238774;
+    background-color: #238774; /* Cor de fundo verde */
     color: white;
-    padding: 20px;
+    padding: 30px 20px; /* Espaçamento interno para o título (superior e inferior) */
     font-size: 35px;
-    margin: 0;
+    margin: 0; /* Remove a margem para evitar espaços entre o título e a área do card */
     text-align: center;
+    border-top-left-radius: 10px; /* Bordas arredondadas do título */
+    border-top-right-radius: 10px; /* Bordas arredondadas do título */
 }
 
 /* Estilo para o corpo do card */
@@ -90,25 +91,37 @@ body {
     color: rgb(18, 71, 114);
 }
 
+/* Estilo para o rodapé */
+footer {
+    background-color: #161818;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-    /* Reduz o tamanho do card e ajusta a largura */
     .Texto {
-        width: 90%; /* Largura maior para se ajustar melhor em telas pequenas */
-        margin: 30px auto; /* Diminui a margem para telas menores */
+        width: 100%; /* Tamanho de 100% da largura da tela */
+        max-width: 400px; /* Reduz a largura máxima em telas menores */
+        margin: 40px auto; /* Margem superior e inferior ajustada */
+        padding: 0; /* Remove o padding extra do card */
     }
 
-    /* Ajusta o título para ficar menor em telas pequenas */
+    /* Ajuste de título, mensagem e e-mail */
     .Titulo {
-        font-size: 28px; /* Reduz o tamanho da fonte */
+        font-size: 28px; /* Reduz o tamanho da fonte do título */
     }
 
-    /* Ajuste do tamanho do texto da mensagem */
     .message {
         font-size: 14px; /* Reduz o tamanho da fonte */
     }
 
-    /* Ajuste do tamanho do e-mail */
     .email {
         font-size: 16px; /* Reduz o tamanho da fonte do e-mail */
     }
@@ -117,12 +130,15 @@ body {
 /* Responsividade para telas muito pequenas (ex: celulares pequenos) */
 @media (max-width: 480px) {
     .Texto {
-        width: 80%; /* Maior largura para telas muito pequenas */
+        width: 100%; /* Tamanho de 100% da largura da tela */
+        max-width: 350px; /* Reduz a largura máxima ainda mais para telas muito pequenas */
         margin: 30px auto; /* Margem menor */
+        padding: 0; /* Remove o padding extra do card */
     }
 
+    /* Ajuste de título, mensagem e e-mail */
     .Titulo {
-        font-size: 24px; /* Fontes menores para telas muito pequenas */
+        font-size: 24px; /* Tamanho da fonte reduzido para telas pequenas */
     }
 
     .message {
@@ -130,92 +146,138 @@ body {
     }
 
     .email {
-        font-size: 14px; /* Reduz o tamanho da fonte do e-mail */
+        font-size: 14px; /* Tamanho do e-mail ajustado para telas pequenas */
     }
-} 
-
-/* Ajuste para garantir que o conteúdo fique centralizado na tela, sem sobrecarregar a margem */
-@media (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Espaça conteúdo de header e rodapé */
-        height: 100vh; /* A altura da tela é ocupada */
-    }
-
 }
 
-/* Estilos para o rodapé */
 
+/* Estilo para o rodapé */
 footer {
     background-color: #161818;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     height: 120px;
-    position: fixed; /* Alteração para fixar o rodapé na parte inferior */
-    bottom: 0; /* Garante que o rodapé fique sempre no final */
-    left: 0; /* Ajusta a posição para a esquerda */
-    z-index: 1000; /* Garante que o rodapé ficará sobre outros elementos */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  
-  /* Container geral para os itens do rodapé */
-  
-  .footer-container {
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .Texto {
+        width: 100%; /* Tamanho de 100% da largura da tela */
+        max-width: 400px; /* Reduz a largura máxima em telas menores */
+        margin: 40px auto; /* Margem superior e inferior ajustada */
+        padding: 15px; /* Padding reduzido para não ocupar muito espaço */
+    }
+
+    /* Ajuste de título, mensagem e e-mail */
+    .Titulo {
+        font-size: 28px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .email {
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex: celulares pequenos) */
+@media (max-width: 480px) {
+    .Texto {
+        width: 100%; /* Tamanho de 100% da largura da tela */
+        max-width: 350px; /* Reduz a largura máxima ainda mais para telas muito pequenas */
+        margin: 30px auto; /* Margem menor */
+        padding: 10px; /* Padding reduzido */
+    }
+
+    /* Ajuste de título, mensagem e e-mail */
+    .Titulo {
+        font-size: 24px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    .email {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para o rodapé */
+
+footer {
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+    background-color: #161818;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 120px;
+    position: relative; /* Alterado de absolute para relative */
+    bottom: 0; /* Garantir que o rodapé fique na parte inferior */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center;
+}
+
+/* Container geral para os itens do rodapé */
+.footer-container {
     display: flex;
     justify-content: space-between; /* Espaça os itens nas extremidades */
     align-items: center;
     gap: 30px; /* Espaçamento entre os itens */
-  }
-  
-  /* Redes sociais do rodapé */
-  
-  .socialmedia2 {
+}
+
+/* Redes sociais do rodapé */
+.socialmedia2 {
     position: absolute;
     top: 40px;
     left: 20px;
     display: flex;
     gap: 20px; /* Espaçamento entre os ícones */
-  }
-  
-  .socialmedia2 a {
+}
+
+.socialmedia2 a {
     text-decoration: none;
-  }
-  
-  .socialmedia2 img {
+}
+
+.socialmedia2 img {
     width: 41px;
     height: 38px;
     opacity: 0.5;
     transition: opacity 0.3s, transform 0.3s;
-  }
-  
-  .socialmedia2 img:hover {
+}
+
+.socialmedia2 img:hover {
     opacity: 1;
     transform: scale(1.1);
-  }
-  
-  /* Rede sociais no rodapé */
-  
-  .nav2 a {
+}
+
+/* Rede sociais no rodapé */
+.nav2 a {
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: bold;
-  }
-  
-  /* Texto no rodapé */
-  
-  .nav2 p {
+}
+
+/* Texto no rodapé */
+.nav2 p {
     margin-top: 10px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-  }
-  
-  /* Logos do jogo no rodapé */
-  
-  .logosdojogo {
+}
+
+/* Logos do jogo no rodapé */
+.logosdojogo {
     position: absolute; /* Fixar a posição na tela */
     bottom: 40px; /* Distância da parte inferior */
     right: 30px; /* Distância da parte direita */
@@ -223,101 +285,93 @@ footer {
     align-items: center;
     gap: 15px; /* Espaçamento entre os logos */
     z-index: 1; /* Garantir que o container fique acima de outros elementos */
-  }
-  
-  .logosdojogo a {
+}
+
+.logosdojogo a {
     text-decoration: none;
-  }
-  
-  .logosdojogo .unity-logo img,
-  .logosdojogo .trex-logo img {
+}
+
+.logosdojogo .unity-logo img,
+.logosdojogo .trex-logo img {
     opacity: 0.5; /* Define a opacidade inicial */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves para opacidade e transform */
     height: auto; /* Mantém a proporção da imagem */
-  }
-  
-  .logosdojogo .unity-logo img {
+}
+
+.logosdojogo .unity-logo img {
     width: 41px;
     height: 38px;
-  }
-  
-  .logosdojogo .unity-logo:hover img {
+}
+
+.logosdojogo .unity-logo:hover img {
     opacity: 1; /* Aumenta a opacidade no hover */
     transform: scale(1.1); /* Efeito de zoom */
-  }
-  
-  .logosdojogo .trex-logo img {
+}
+
+.logosdojogo .trex-logo img {
     width: 120px; /* Largura fixa para o logo do T-Rex */
     margin-left: 15px; /* Ajuste de margem entre os logos */
-  }
-  
-  .logosdojogo .trex-logo:hover img {
+}
+
+.logosdojogo .trex-logo:hover img {
     opacity: 1; /* Aumenta a opacidade no hover */
     transform: scale(1.1); /* Efeito de zoom */
-  }
-  
-  /* Separador entre os logos */
-  
-  .logosdojogo .separator {
+}
+
+/* Separador entre os logos */
+.logosdojogo .separator {
     width: 4px;
     height: 20px; /* Altura do separador */
     background-color: white;
     margin: 0 15px;
     opacity: 0.5; /* Define a opacidade inicial do separador */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave no hover */
-  }
-  
-  .logosdojogo .separator:hover {
+}
+
+.logosdojogo .separator:hover {
     opacity: 1; /* Aumenta a opacidade do separador */
     transform: scale(1.1); /* Efeito de zoom */
-  }
-  
-  /* Responsividade para telas pequenas */
-  
-  @media (max-width: 768px) {
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
     footer {
-      width: 100%;
-      height: 200px;
-      padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
+        width: 100%;
+        height: 200px;
+        padding: 20px 10px; /* Ajusta o padding do rodapé para telas pequenas */
     }
-  
+
     /* Muda para coluna quando em telas pequenas */
-  
     .footer-container {
-      flex-direction: column; /* Empilha os itens verticalmente */
-      align-items: center; /* Centraliza os itens */
-      gap: 20px; /* Espaçamento entre os itens */
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 20px; /* Espaçamento entre os itens */
     }
-  
+
     /* Redes sociais do rodapé */
-  
     .socialmedia2 {
-      position: relative; /* Muda a posição das redes sociais para relativo */
-      top: 0;
-      left: 0;
-      justify-content: center; /* Centraliza os ícones */
-      gap: 10px; /* Menor espaçamento entre os ícones */
+        position: relative; /* Muda a posição das redes sociais para relativo */
+        top: 0;
+        left: 0;
+        justify-content: center; /* Centraliza os ícones */
+        gap: 10px; /* Menor espaçamento entre os ícones */
     }
-  
+
     /* Ajuste no alinhamento do texto */
-  
     .nav2 {
-      text-align: center; /* Garante que o texto esteja centralizado */
+        text-align: center; /* Garante que o texto esteja centralizado */
     }
-  
+
     /* Ajuste na posição dos logos */
-    
     .logosdojogo {
-      position: relative; /* Muda a posição das redes sociais para relativo */
-      top: 5px;
-      left: 0;
-      justify-content: center; /* Centraliza os ícones */
-      gap: 10px; /* Menor espaçamento entre os ícones */
+        position: relative; /* Muda a posição das redes sociais para relativo */
+        top: 5px;
+        left: 0;
+        justify-content: center; /* Centraliza os ícones */
+        gap: 10px; /* Menor espaçamento entre os ícones */
     }
-  
+
     .logosdojogo .separator {
-      display: none; /* Oculta o separador entre os logos */
+        display: none; /* Oculta o separador entre os logos */
     }
-  }
-  /* Imagem de Fundo para o site */
-  
+}
