@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "RetroGaming";
+    src: url("Fonte/RetroGaming.ttf") format("truetype");
+    font-weight: normal; /* Altere para "bold" se for necessário */
+    font-style: normal;  /* Altere para "italic" se for necessário */
+  }  
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -15,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Garantir que o body ocupe 100% da altura da tela */
+    font-family: "RetroGaming", sans-serif;
 }
 
 /* Estilo do cabeçalho */
