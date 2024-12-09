@@ -122,7 +122,7 @@ body {
 
 /* Título "RESULTADOS" alinhado à esquerda */
 .Conteudo {
-padding: 150px 150px;
+padding: 100px 100px;
 }
 
 .Conteudo h1 {
@@ -208,9 +208,16 @@ border-radius: 20px;
 /* Responsividade */
 
 @media (max-width: 768px) {
+  .Conteudo {
+    padding: 30px 30px;
+    }
+    
+
 .Conteudo2 {
   flex-direction: column;   /* Muda a direção para coluna em telas pequenas */
   align-items: center;      /* Alinha os itens ao centro */
+  margin-right: 30px; /* Espaço entre o texto e a imagem */       
+  margin-left: 30px;       /* Espaçamento entre os elementos */
 }
 
 .Texto-conteudo, .imagem-video {
@@ -220,6 +227,7 @@ border-radius: 20px;
 
 .Texto-conteudo {
   margin-bottom: 20px;      /* Adiciona margem abaixo do texto para separar da imagem */
+  
 }
 }
 
