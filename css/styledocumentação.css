@@ -122,14 +122,14 @@ body {
 
 /* Título "RESULTADOS" alinhado à esquerda */
 .Conteudo {
-padding: 60px 60px;
+padding: 150px 150px;
 }
 
 .Conteudo h1 {
 font-size: 24px;
 color: white;
 margin-bottom: 50px;
-margin-top:50px;
+margin-top:10px;
 }
 
 .Conteudo h2 {
@@ -341,13 +341,12 @@ text-align: center; /* Centraliza o texto dentro dos títulos */
 }
 
 .Titulos2 .titulo3 {
-margin-right: 10px;
 font-size: 30px;
 
 }
 
 .Titulos2 .subtitulo3 {
-font-size: 40px;
+font-size: 42px;
 font-family: 'Retro Gaming', sans-serif;
 margin-top: 5px; /* Dá um pequeno espaçamento entre o título e o subtítulo */
 }

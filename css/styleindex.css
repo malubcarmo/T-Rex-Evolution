@@ -355,6 +355,8 @@ header  {
     color: #ffffff;
     z-index: 1;
     position: relative; /* Necessário para o z-index funcionar */ 
+    margin-right: 30px;
+    margin-left: 30px;
    
   }
   
@@ -398,36 +400,62 @@ header  {
   }
 }
   
-  /* Conteudo + Img */
-  
+   /* Conteudo + Img */
+.Conteudo {
+  margin-top: 40px;
+  display: flex;              /* Alinha os itens na horizontal */
+  justify-content: space-between; /* Espaço entre o texto e o vídeo */
+  align-items: center;        /* Alinha verticalmente no centro */
+  gap: 20px;                  /* Espaçamento entre os elementos */
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* Estilos do texto */
+.Texto-conteudo {
+  color: #ffffff;
+  flex: 1;                    /* O texto ocupa o espaço disponível */
+  max-width: 50%;             /* Limita a largura do texto a no máximo 50% */
+  z-index: 1;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify; /* Justifica o texto */
+  margin-right: 20px; /* Espaço entre o texto e o vídeo */
+}
+
+/* Estilos para o iframe (vídeo do YouTube) */
+iframe {
+  width: 100%;               /* O iframe ocupa 100% da largura disponível */
+  max-width: 600px;          /* Limita a largura máxima do vídeo */
+  height: 416px;              /* Altura ajustada automaticamente para manter proporção */
+  aspect-ratio: 16/9;        /* Proporção 16:9 para o vídeo */
+  margin-left: 20px;         /* Espaço à esquerda do vídeo */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .Conteudo {
-    margin-top: 30px;
-    display: flex;              /* Alinha os itens na horizontal */
-    justify-content: space-between; /* Espaço entre o texto e a imagem */
-    align-items: center;        /* Alinha verticalmente no centro */
-    gap: 20px;                  /* Espaçamento entre os elementos */
+    flex-direction: column;   /* Muda a direção para coluna em telas pequenas */
+    align-items: center;      /* Alinha os itens ao centro */
+    gap: 10px;                /* Menos espaço entre os itens */
   }
-  
-  /* Estilos do texto */
-  
+
+  .Texto-conteudo, iframe {
+    max-width: 100%;          /* Ambos os itens ocupam 100% da largura em telas pequenas */
+  }
+
   .Texto-conteudo {
-    color: #ffffff;
-    flex: 1;                    /* O texto ocupa o espaço disponível */
-    max-width: 50%;             /* Limita a largura do texto a no máximo 50% */
-    z-index: 1;
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 1.6;
-    text-align: justify; /* Justifica o texto */
-    margin-right: 20px; /* Espaço entre o texto e a imagem */
+    margin-right: 0;          /* Remove a margem à direita do texto */
+    margin-bottom: 20px;      /* Adiciona margem abaixo do texto para separar da imagem */
   }
-  /* Estilos da imagem */
-  
-  .imagem-video {
-    max-width: 50%;             /* Limita a largura da imagem a 50% */
-    height: auto;               /* Ajusta a altura proporcionalmente */
-    z-index: 1;
+
+  iframe {
+    max-width: 100%;          /* O vídeo ocupa 100% da largura em telas pequenas */
+    height: auto;              /* Altura ajustada automaticamente para manter proporção */
+    margin-left: 0;           /* Remove a margem esquerda no vídeo */
   }
+}
   
   /* Responsividade */
   
@@ -683,19 +711,18 @@ header  {
   }
   
  /* Responsividade para telas de 768px ou menores */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .personagens {
     justify-content: center; /* Alinha os itens ao centro em telas menores */
-    gap: 15px; /* Reduz o espaçamento entre os cards */
   }
 
   .personagem {
-    width:  90%; /* Ajusta a largura para 45% em telas menores */
-    margin-bottom: 20px; /* Mantém o espaço na parte inferior */
+    width: 80%; /* Aumenta a largura para 45% em telas menores */
+    margin-bottom: 40px; /* Mantém o espaço na parte inferior */
   }
 
   .imagem-container {
-    width: 100%; /* Ajusta a largura para caber em telas menores */
+    width: 90%; /* Ajusta a largura da imagem para caber em telas menores */
     height: auto; /* Ajusta a altura proporcionalmente */
   }
 }
@@ -704,19 +731,19 @@ header  {
 @media (max-width: 480px) {
   .personagens {
     justify-content: center; /* Alinha os itens ao centro */
-    gap: 10px; /* Reduz o espaçamento entre os cards para telas menores */
   }
 
   .personagem {
-    width: 90%; /* Aumenta a largura para 90% em telas muito pequenas */
-    margin-bottom: 15px; /* Ajusta o espaço inferior */
+    width: 70%; /* Aumenta a largura para 90% em telas muito pequenas */
+    margin-bottom: 30px; /* Ajusta o espaço inferior */
   }
 
   .imagem-container {
-    width: 100%; /* A imagem ocupa toda a largura disponível */
+    width: 80%; /* A imagem ocupa toda a largura disponível */
     height: auto; /* Ajusta a altura proporcionalmente */
   }
 }
+
 
 /* Estilos para o rodapé */
 
