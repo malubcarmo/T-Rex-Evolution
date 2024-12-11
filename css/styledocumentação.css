@@ -62,31 +62,6 @@ body {
   text-align: center;
 }
 
-/* Estilo para o título h1 */
-.Titulo h1 {
-  font-size: 30px; /* Tamanho inicial da fonte */
-  color: #238774;
-  position: absolute; /* Posiciona o título sobre a imagem */
-  top: 32%; /* Ajusta a posição vertical do título em relação ao topo da div */
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  padding: 10px 20px; /* Adiciona padding para dar espaço ao texto */
-  border-radius: 5px; /* Borda arredondada */
-}
-
-/* Estilo para o título h2 */
-.Titulo h2 {
-  font-size: 45px; /* Tamanho inicial da fonte */
-  font-family: 'Retro Gaming', sans-serif;
-  color: white;
-  position: absolute; /* Posiciona o título sobre a imagem */
-  top: 45%; /* Ajusta a posição vertical do título em relação ao topo da div */
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  background-color: #000000; /* Fundo com cor definida */
-  padding: 10px 20px; /* Adiciona padding para dar espaço ao texto */
-  border-radius: 5px; /* Borda arredondada */
-}
 
 /* Estilo da imagem */
 .Titulo img {
@@ -99,17 +74,7 @@ body {
 
 /* Media query para telas menores (por exemplo, smartphones) */
 @media (max-width: 768px) {
-  /* Ajusta os tamanhos dos títulos para telas menores */
-  .Titulo h1 {
-    font-size: 20px; /* Diminui o tamanho do título h1 */
-    top: 20%; /* Ajusta a posição vertical para ficar mais centrado */
-  }
 
-  .Titulo h2 {
-    font-size: 30px; /* Diminui o tamanho do título h2 */
-    top: 35%; /* Ajusta a posição vertical para ficar mais centrado */
-  }
-  
   /* Ajusta a imagem para telas menores */
   .Titulo img {
     height: 300px; /* Ajusta a altura da imagem para um tamanho mais adequado */

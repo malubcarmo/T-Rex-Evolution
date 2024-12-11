@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'RetroGaming';
-  src: url('Fonte/RetroGaming.woff2') format('woff2'),
-       url('Fonte/RetroGaming.woff') format('woff'),
-       url('Fonte/RetroGaming.ttf') format('truetype');
+  src: url('/Fonte/RetroGaming.woff2') format('woff2'),
+       url('/Fonte/RetroGaming.woff') format('woff'),
+       url('/Fonte/RetroGaming.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -656,7 +656,7 @@ iframe {
   .personagem {
     text-align: center;
     width: 30%; /* Cada item ocupa 30% do espaço, para três itens na mesma linha */
-    margin-bottom: 20px; /* Adiciona espaço na parte inferior */
+    margin-bottom: 50px; /* Adiciona espaço na parte inferior */
     box-sizing: border-box; /* Para garantir que a largura inclui padding e borda */
   }
   
@@ -717,8 +717,8 @@ iframe {
   }
 
   .personagem {
-    width: 80%; /* Aumenta a largura para 45% em telas menores */
-    margin-bottom: 40px; /* Mantém o espaço na parte inferior */
+    width: 70%; /* Aumenta a largura para 45% em telas menores */
+    margin-bottom: 50px; /* Mantém o espaço na parte inferior */
   }
 
   .imagem-container {
