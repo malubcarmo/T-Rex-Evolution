@@ -436,6 +436,8 @@ iframe {
 /* Responsividade */
 @media (max-width: 768px) {
   .Conteudo {
+    margin-right: 20px; /* Espaço entre o texto e a imagem */       
+    margin-left: 20px;       /* Espaçamento entre os elementos */
     flex-direction: column;   /* Muda a direção para coluna em telas pequenas */
     align-items: center;      /* Alinha os itens ao centro */
     gap: 10px;                /* Menos espaço entre os itens */
