@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'RetroGaming';
-  src: url('Fonte/RetroGaming.woff2') format('woff2'),
-       url('Fonte/RetroGaming.woff') format('woff'),
-       url('Fonte/RetroGaming.ttf') format('truetype');
+  src: url('Fonte/Retro Gaming.woff2') format('woff2'),
+       url('Fonte/Retro Gaming.woff') format('woff'),
+       url('Fonte/Retro Gaming.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@ body {
   height: 100%;
   overflow-x: hidden; /* Impedir rolagem horizontal */
   background-color: #3c454e;
-  font-family: "RetroGaming", sans-serif;
+  font-family: "Retro Gaming", sans-serif;
 }
 
 
