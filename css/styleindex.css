@@ -95,6 +95,7 @@ header  {
   padding: 10px;
   transition: background-color 0.3s;
   border-radius: 10px;
+  font-family: "Poppins", sans-serif; 
 }
 
 .nav a:hover {
@@ -361,6 +362,7 @@ header  {
   
   .Texto .titulo {
     font-size: 30px;
+    font-family: "Poppins", sans-serif; 
   }
   
   .Texto .subtitulo {
@@ -408,6 +410,7 @@ header  {
   gap: 20px;                  /* Espaçamento entre os elementos */
   margin-right: 30px;
   margin-left: 30px;
+  font-family: "Poppins", sans-serif; 
 }
 
 /* Estilos do texto */
@@ -600,8 +603,9 @@ iframe {
   
   .Texto2 .titulo {
       margin-right: 50px;
-       font-size: 30px;
+      font-size: 30px;
       margin-bottom: 10px; /* Controle melhor do espaçamento entre título e subtítulo */
+      font-family: "Poppins", sans-serif; 
     }
     
   .Texto2 .subtitulo {
@@ -619,7 +623,7 @@ iframe {
 
   .Texto2 .titulo {
     font-size: 22px; /* Ajusta o tamanho da fonte do título */
-    margin-right: 20px; /* Reduz o espaçamento à direita */
+  
   }
 
   .Texto2 .subtitulo {
